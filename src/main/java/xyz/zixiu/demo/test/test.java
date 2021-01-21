@@ -1,6 +1,5 @@
 package xyz.zixiu.demo.test;
 
-
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,7 +20,7 @@ public class test {
         bean_test_Mapper bm =(bean_test_Mapper)ac.getBean("bean_test_Mapper");
 
         //03.调用办法
-        bm.save_bean_test(new bean_test(222,"test_02","test_02"));
+        bm.save_bean_test(new bean_test(333,"test_02","test_02"));
 
     }
 }
