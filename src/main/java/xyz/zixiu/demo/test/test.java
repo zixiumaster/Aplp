@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import xyz.zixiu.demo.bean.bean_test;
-import xyz.zixiu.demo.dao.bean_test_Mapper;
+import xyz.zixiu.demo.service.bean_test_service;
 
 
 public class test {
@@ -15,12 +15,19 @@ public class test {
         //01.加载spring配置
         ApplicationContext ac = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        //02.获取对象
-        //getBean需要applicationCaontext.xml里面注入对象的id与之对应
-        bean_test_Mapper bm =(bean_test_Mapper)ac.getBean("bean_test_Mapper");
+        bean_test_service service = (bean_test_service)ac.getBean("bean_test_service");
 
-        //03.调用办法
-        bm.save_bean_test(new bean_test(333,"test_02","test_02"));
-
+        service.save_bean_test(new bean_test(888,"test_02","test_02"));
+        
+//        运行结果为：
+//            抛出错误，数据库未写入记录
+//        @Override
+//        public void save_bean_test(bean_test bean) {
+//            Mapper.save_bean_test(bean);
+//            int i=100/0;
+//            Mapper.save_bean_test(bean);
+//        }
+//        因为开启了事物管理，所以ServiceImpl里的代码出错时，整个方法都放弃执行
+        
     }
 }

@@ -55,4 +55,17 @@
                 <!-- 配置Mapper接口所在包的路径 -->
                 <property name="basePackage" value="xyz.zixiu.demo.dao" />
         </bean>
+
+        <!-- 开启Spring的IOC注解扫描 -->
+        <context:component-scan base-package="xyz.zixiu.demo" />
+
+        <!-- 开启Spring的事务管理 -->
+        <!-- 事务管理器 -->
+        <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="dataSource" />
+        </bean>
+
+        <!-- 启用Spring事务注解 -->
+        <tx:annotation-driven transaction-manager="dataSourceTransactionManager" />
+
 </beans>
