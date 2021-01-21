@@ -4,6 +4,12 @@ public class bean_test {
     private int id;
     private String name;
     private String pwd;
+    public bean_test(int id,String name,String pwd){
+        setId(id);
+        setName(name);
+        setPwd(pwd);
+    }
+    public bean_test(){}
     public int getId() {
         return id;
     }
