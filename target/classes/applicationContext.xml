@@ -47,9 +47,11 @@
                 <property name="mapperLocations" value="classpath:mapper/bean_test_Mapper.xml" />
         </bean>
 
-        <!-- 创建bean_test_Mapper_Impl对象，注入SqlSessionFactory -->
-        <bean id="bean_test_mapper" class="xyz.zixiu.demo.dao.Impl.bean_test_Mapper_Impl" >
-                <!-- 使用上文定义的id为sqlSessionFactory的连接池注入进去，让ref和它对应 -->
+        <!-- 配置Mapper接口 -->
+        <bean id="bean_test_Mapper" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+                <!-- 关联Mapper接口 -->
+                <property name="mapperInterface" value="xyz.zixiu.demo.dao.bean_test_Mapper" />
+                <!-- 关联SqlSessionFactory -->
                 <property name="sqlSessionFactory" ref="sqlSessionFactory" />
         </bean>
 

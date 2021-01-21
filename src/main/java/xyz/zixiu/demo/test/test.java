@@ -18,10 +18,10 @@ public class test {
 
         //02.获取对象
         //getBean需要applicationCaontext.xml里面注入对象的id与之对应
-        bean_test_Mapper bm =(bean_test_Mapper)ac.getBean("bean_test_mapper");
+        bean_test_Mapper bm =(bean_test_Mapper)ac.getBean("bean_test_Mapper");
 
         //03.调用办法
-        bm.save_bean_test(new bean_test(11,"test_02","test_02"));
+        bm.save_bean_test(new bean_test(222,"test_02","test_02"));
 
     }
 }
