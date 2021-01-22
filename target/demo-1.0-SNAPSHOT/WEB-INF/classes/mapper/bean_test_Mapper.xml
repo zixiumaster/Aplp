@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace要与接口类名对应 -->
+<mapper namespace="xyz.zixiu.demo.dao.bean_test_Mapper">
+
+    <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
+    <insert id="save_bean_test" parameterType="xyz.zixiu.demo.bean.bean_test">
+        insert INTO test_01.stu(
+            id,name,pwd
+        )values(
+             #{id},#{name},#{pwd}
+        )
+    </insert>
+
+</mapper>

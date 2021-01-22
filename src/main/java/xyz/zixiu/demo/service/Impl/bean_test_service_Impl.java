@@ -19,7 +19,5 @@ public class bean_test_service_Impl implements bean_test_service {
     @Override
     public void save_bean_test(bean_test bean) {
         Mapper.save_bean_test(bean);
-        int i=100/0;
-        Mapper.save_bean_test(bean);
     }
 }
