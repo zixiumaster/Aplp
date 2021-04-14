@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace要与接口类名对应 -->
+<mapper namespace="xyz.zixiu.demo.dao.system.SystemMapper">
+
+    <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
+    <update id="CreateDepartment">
+        create table aplp_school.department
+        (
+            id      varchar(20) not null primary key,
+            name    varchar(20) not null unique,
+            college varchar(20) null
+        )
+    </update>
+    <update id="CreateMajor">
+        create table aplp_school.major
+        (
+            id         varchar(20) not null primary key,
+            name       varchar(20) not null unique,
+            department varchar(20) not null
+        )
+    </update>
+    <update id="CreateGradeclass">
+        create table aplp_school.gradeclass
+        (
+            name      varchar(20) not null primary key,
+            major     varchar(20) not null,
+            schooling int         not null,
+            grade     date        not null,
+            director  int         not null
+        )
+    </update>
+    <update id="CreateStudent">
+        create table aplp_school.student
+        (
+            id         varchar(20) not null primary key,
+            name       varchar(20) not null unique,
+            gradeclass varchar(20) not null,
+            phone      varchar(20) null,
+            email      varchar(30) null,
+            password   varchar(20) not null
+        )
+    </update>
+    <update id="CreateTeacher">
+        create table aplp_school.teacher
+        (
+            id         varchar(20) not null primary key,
+            name       varchar(20) not null unique,
+            department varchar(20) not null,
+            phone      varchar(20) null,
+            email      varchar(30) null,
+            password   varchar(20) not null
+        )
+    </update>
+    <update id="CreateCourse">
+        create table aplp_school.course
+        (
+            id        varchar(20) not null primary key,
+            name      varchar(20) not null,
+            test_type enum('考察','考试','待定') not null,
+            credit    int         not null
+        )
+    </update>
+    <update id="CreateClassroom">
+        create table aplp_school.classroom
+        (
+            id              varchar(20) not null primary key,
+            building_number varchar(20) not null,
+            name            varchar(20) not null,
+            type            varchar(20)
+        )
+    </update>
+    <update id="CreateCourse_gradeclass">
+        create table aplp_school.course_gradeclass
+        (
+            course     varchar(20) not null,
+            gradeclass varchar(20) not null
+        )
+    </update>
+    <update id="CreateCourse_teacher">
+        create table aplp_school.course_teacher
+        (
+            course  varchar(20) not null,
+            teacher varchar(20) not null
+        )
+    </update>
+    <update id="CreateCourse_classroom">
+        create table aplp_school.course_classroom
+        (
+            course    varchar(20) not null,
+            classroom varchar(20) not null,
+            semester  varchar(20) not null,
+            parity    enum('单','双','全') not null,
+            week      int         not null,
+            day       enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday') not null
+        )
+    </update>
+    <update id="CreateSemester">
+        create table aplp_school.semester
+        (
+            id varchar(20) not null primary key
+        )
+    </update>
+    <update id="CreateDst_time">
+        create table aplp_school.dst_time
+        (
+            dst   enum('夏令时','冬令时') not null,
+            Start time not null,
+            end   time not null
+        )
+    </update>
+    <update id="CreateDst_date">
+        create table aplp_school.dst_date
+        (
+            dst   enum('夏令时','冬令时') not null,
+            Start date not null
+        )
+    </update>
+</mapper>

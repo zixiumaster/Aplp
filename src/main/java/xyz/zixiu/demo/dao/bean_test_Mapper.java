@@ -6,4 +6,6 @@ public interface bean_test_Mapper {
 
     public void save_bean_test(bean_test bean);
 
+
+
 }

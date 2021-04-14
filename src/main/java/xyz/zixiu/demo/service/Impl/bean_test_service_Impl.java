@@ -20,4 +20,5 @@ public class bean_test_service_Impl implements bean_test_service {
     public void save_bean_test(bean_test bean) {
         Mapper.save_bean_test(bean);
     }
+
 }

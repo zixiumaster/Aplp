@@ -6,6 +6,20 @@
 
     <display-name>dome</display-name>
 
+    <!--配置SpringMVC编码过滤器-->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <!--启动spring-mvc-->
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
@@ -30,9 +44,12 @@
     <!--修改路径-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>
+            classpath:applicationContext.xml,
+            classpath:applicationContext_system.xml,
+            classpath:applicationContext_school.xml
+        </param-value>
     </context-param>
-
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
