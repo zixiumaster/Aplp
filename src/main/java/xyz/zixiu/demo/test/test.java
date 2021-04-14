@@ -5,7 +5,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import xyz.zixiu.demo.bean.bean_test;
 import xyz.zixiu.demo.service.bean_test_service;
-import xyz.zixiu.demo.service.system.SystemService;
 
 
 public class test {
@@ -17,14 +16,9 @@ public class test {
 //        bean_test_service service = (bean_test_service)ac.getBean("bean_test_service");
 //        service.save_bean_test(new bean_test(999,"test_02","test_02"));
 
-        ApplicationContext ac = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext_system.xml");
-        SystemService systemService = (SystemService) ac.getBean("SystemService");
-
-//        systemService.DropSchool();
-//        systemService.CreateSchool();
-        systemService.CheckSchool();
-
-
+        ApplicationContext ac1 = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext.xml");
+        bean_test_service t =(bean_test_service) ac1.getBean("bean_test_service");
+        t.save_bean_test(new bean_test(123,"123","123"));
 
     }
 }
