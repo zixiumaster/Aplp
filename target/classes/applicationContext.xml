@@ -44,7 +44,7 @@
                 <property name="dataSource" ref="dataSource" />
                 <!-- 加载sql映射文件 -->
                 <!-- 加载mapper目录下的语句映射文件 -->
-                <property name="mapperLocations" value="classpath:mapper/bean_test_Mapper.xml" />
+                <property name="mapperLocations" value="classpath:mapper/StudentMapper.xml" />
         </bean>
 
         <!-- Mapper接口的扫描 -->
