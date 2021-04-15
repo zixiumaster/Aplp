@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <!-- Mapper接口的扫描 -->
+        <!--
+                如果使用Mapper接口包扫描，那么每个Mapper接口在Spring容器中的id名称为类名，例如bean_test_Mapper -> bean_test_Mapper
+        -->
+        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+                <!-- 配置Mapper接口所在包的路径 -->
+                <property name="basePackage" value="xyz.zixiu.demo.Dao" />
+        </bean>
+
+        <!-- 开启Spring的IOC注解扫描 -->
+        <context:component-scan base-package="xyz.zixiu.demo" />
+
+        <!-- 开启Spring的事务管理 -->
+        <!-- 事务管理器 -->
+        <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="dataSourceAplp" />
+        </bean>
+        <!-- 启用Spring事务注解 -->
+        <tx:annotation-driven transaction-manager="dataSourceTransactionManager" />
+
+</beans>

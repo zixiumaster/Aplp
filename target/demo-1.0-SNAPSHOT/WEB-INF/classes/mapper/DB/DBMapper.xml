@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace要与接口类名对应 -->
+<mapper namespace="xyz.zixiu.demo.Dao.User.StudentMapper">
+
+    <select id="CheckSchool" resultType ="java.lang.Integer">
+        select COUNT(*)
+        from SCHEMATA
+        where SCHEMA_NAME = 'aplp'
+    </select>
+
+    <update id="CreateSchool" >
+        create database aplp
+    </update>
+
+    <delete id="DropSchool" >
+        drop database aplp
+    </delete>
+
+</mapper>

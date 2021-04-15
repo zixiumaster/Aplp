@@ -12,7 +12,7 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <!--扫描Controller所在的包-->
-    <context:component-scan base-package="xyz.zixiu.demo.Controller" />
+    <context:component-scan base-package="xyz.zixiu.aplp.Controller" />
 
     <!--注解驱动-->
     <mvc:annotation-driven></mvc:annotation-driven>
