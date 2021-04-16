@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sqlSessionFactoryDB" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 关联连接池 -->
+        <!-- 使用上文定义的id为dataSource的数据库连接配置，让ref和它对应 -->
+        <property name="dataSource" ref="dataSourceDB" />
+        <!-- 加载sql映射文件 -->
+        <!-- 加载mapper目录下的语句映射文件 -->
+        <property name="mapperLocations"  >
+            <array>
+                <value>classpath:mapper/DB/DBMapper.xml</value>
+            </array>
+        </property>
+    </bean>
+
+
+
+
+</beans>

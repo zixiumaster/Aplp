@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test")
 class test_Controller {
 
+
     @RequestMapping("/t1")
     public String t1(){
 
-        System.out.println("sssssssssssssssssssssssssssssssssss");
+        System.out.println("\n\nsssssssssssssssssssssssssssssssssss\n\n");
 
-        ApplicationContext ac = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        System.out.println("ggggggggggggggggggggggggggggg");
+        System.out.println("\n\nggggggggggggggggggggggggggggg\n\n");
 
 //        bean_test_service service = (bean_test_service)ac.getBean("bean_test_service");
 //
