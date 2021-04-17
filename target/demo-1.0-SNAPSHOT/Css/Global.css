@@ -1,0 +1,8 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: url(../img/main_bg.jpg);
+	background-size: 100%;
+}
