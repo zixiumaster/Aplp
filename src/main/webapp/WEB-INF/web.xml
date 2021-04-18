@@ -27,7 +27,7 @@
         <!--参数：读取spring-mvc.xml-->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring-mvc.xml</param-value>
+            <param-value>classpath:spring-mvc-newed.xml</param-value>
         </init-param>
     </servlet>
 

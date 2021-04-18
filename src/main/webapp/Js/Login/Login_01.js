@@ -3,25 +3,29 @@ var VerificationCode;
 
 function loginOnclick() {
 
-	if(checkVerificationCode()){
+	//if(checkVerificationCode()){
 		loginPost();
-	}
+	//}
 }
 
 function loginPost() {
 	$.ajax({
 		url: "http://localhost:8080/Aplp_war/Login/stu.action",
-		contentType: "application/json;charset=utf-8",
+		//url:"test.json",
+		contentType: "application/x-www-form-urlencoded",
 		data:getText(),
-		dataType: "json",
+		dataType: "./json",
 		type: "POST",
-		xhrFields: {withCredentials: true},
-		success:function(data) {
+		crossDomain: true,
+		headers: {"Access-Control-Allow-Origin": "*"},
+		success:function() {
 			console.log(data);
 			alert(data);
 		}
 		, error:function(XMLResponse){
 			console.log(XMLResponse.responseText);
+		//	console.log(XMLResponse.toString());
+
 			//alert(XMLResponse.responseText);
 		}
 	});
