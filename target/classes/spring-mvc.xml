@@ -21,7 +21,6 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--        访问前缀-->
         <property name="prefix" value="/WEB-INF/jsp/" />
-
         <!--        访问后缀-->
         <property name="suffix" value=".jsp" />
     </bean>

@@ -30,6 +30,7 @@
             <param-value>classpath:spring-mvc.xml</param-value>
         </init-param>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>*.action</url-pattern>

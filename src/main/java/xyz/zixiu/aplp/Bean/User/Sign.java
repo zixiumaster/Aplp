@@ -21,12 +21,11 @@ public class Sign {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-    public String getBy() {
+    public String getBasis() {
         return basis;
     }
 
-    public void setBy(String by) {
+    public void setBasis(String basis) {
         this.basis = basis;
     }
 

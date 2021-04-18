@@ -3,16 +3,14 @@ var VerificationCode;
 
 function loginOnclick() {
 
-	//checkVerificationCode();
-	
-	post();
-	
+	if(checkVerificationCode()){
+		loginPost();
+	}
 }
 
-function post() {
+function loginPost() {
 	$.ajax({
-
-		url: "http://localhost:8080/Aplp_war/Login/test.action",
+		url: "http://localhost:8080/Aplp_war/Login/stu.action",
 		contentType: "application/json;charset=utf-8",
 		data:getText(),
 		dataType: "json",
@@ -39,18 +37,11 @@ function getText() {
 	} else if (checkMobile(idText)) {
 		idType = "phone";
 	}
-	var Obj = [];
-	var returnObj = new Object(); //创建一个对象
-	returnObj = {
-		basis: idType,
-		value: idText,
-		password: pwdText
-	}
-	Obj.push(returnObj);
-	Obj = JSON.stringify(Obj);
-	//alert(Obj);
-	return Obj;
-
+	var ret=new Object();
+	ret.basis=idType;
+	ret.value=idText;
+	ret.password=pwdText;
+	return JSON.stringify(ret);
 }
 
 //检测邮箱格式 

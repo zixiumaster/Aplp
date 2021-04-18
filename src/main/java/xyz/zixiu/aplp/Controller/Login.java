@@ -1,32 +1,25 @@
 package xyz.zixiu.aplp.Controller;
-
-import org.apache.tools.ant.taskdefs.email.Message;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.mysql.fabric.xmlrpc.base.Member;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import xyz.zixiu.aplp.Bean.User.Sign;
-
 
 @Controller
 @RequestMapping("/Login")
 public class Login {
 
-    @RequestMapping("/stu")
-    public  String stu(@RequestBody Sign jsonString){
+    String basis;
+    private String value;
+    private String password;
 
-        System.out.println(jsonString.toString());
-
-        return null;
-    }
-
-    @RequestMapping("/test")
-    public String test(@RequestBody String user){
-        System.out.println(user);
-        return user;
-    }
-
-    @RequestMapping("/zixiu")
-    public String zixiu(){
+    @RequestMapping(value="/stu",method= RequestMethod.POST)
+    public String stu(@RequestBody Sign ss){
+        System.out.println(ss.toString());
+        System.out.println("public String stu(@RequestBody Sign ss)");
         return "zixiu";
     }
 
