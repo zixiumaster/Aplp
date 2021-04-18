@@ -8,19 +8,26 @@ function loginOnclick() {
 	//}
 }
 
+function loginPost_01() {
+	variable=new XMLHttpRequest();
+	xmlhttp.open("POST","http://localhost:8080/Aplp_war/Login/stu.action",true);
+	xmlhttp.send();
+}
+
+
 function loginPost() {
 	$.ajax({
-		url: "http://localhost:8080/Aplp_war/Login/stu.action",
+		//url: "http://localhost:8080/Aplp_war/Login/stu.action",
+		url: "http://localhost:8080/Aplp_war/Login/test_01.action",
 		//url:"test.json",
-		contentType: "application/x-www-form-urlencoded",
+		contentType: "application/json",
 		data:getText(),
-		dataType: "./json",
+		//dataType: "text",
+		dataType: "json",
 		type: "POST",
-		crossDomain: true,
-		headers: {"Access-Control-Allow-Origin": "*"},
-		success:function() {
-			console.log(data);
-			alert(data);
+		success:function(a) {
+			
+			console.log(a.password);
 		}
 		, error:function(XMLResponse){
 			console.log(XMLResponse.responseText);
