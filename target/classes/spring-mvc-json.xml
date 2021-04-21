@@ -31,9 +31,9 @@
     <!--  视图解析器：简化在Controller类编写的视图-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!--        访问前缀-->
-        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="prefix" value="/WEB-INF/" />
         <!--        访问后缀-->
-        <property name="suffix" value=".jsp"/>
+        <property name="suffix" value=""/>
     </bean>
 
 </beans>

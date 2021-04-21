@@ -11,15 +11,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-
-
-
-
-
-
-
-
-
     <!--扫描Controller所在的包-->
     <context:component-scan base-package="xyz.zixiu.aplp.Controller" />
 

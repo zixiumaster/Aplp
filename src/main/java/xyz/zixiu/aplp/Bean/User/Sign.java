@@ -1,26 +1,31 @@
 package xyz.zixiu.aplp.Bean.User;
 
 public class Sign {
+
+    private String role;
     private String basis;
-    private String value;
+    private String id;
     private String password;
 
-    public Sign(String basis, String value, String password) {
+    public Sign(String role, String basis, String id, String password){
+        this.role = role;
         this.basis = basis;
-        this.value =value;
+        this.id = id;
         this.password = password;
+    };
+
+    public Sign(){
+    };
+
+
+    public String getRole() {
+        return role;
     }
 
-    public Sign(){};
-
-    @Override
-    public String toString() {
-        return "Sign{" +
-                "basis='" + basis + '\'' +
-                ", value='" + value + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public void setRole(String role) {
+        this.role = role;
     }
+
     public String getBasis() {
         return basis;
     }
@@ -29,12 +34,12 @@ public class Sign {
         this.basis = basis;
     }
 
-    public String getValue() {
-        return value;
+    public String getId() {
+        return id;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getPassword() {
@@ -44,4 +49,5 @@ public class Sign {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

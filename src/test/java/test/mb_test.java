@@ -20,8 +20,6 @@ public class mb_test {
     }
 
     public void Test_01(){
-        ser.stu.login(new Sign("123","123","123"));
-        ser.tea.login(new Sign("123","123","123"));
     }
 
     public void Test_0(){}
