@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace要与接口类名对应 -->
+<mapper namespace="xyz.zixiu.aplp.Dao.User.AdminMapper">
+
+    <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
+    <insert id="saveAdmin" parameterType="xyz.zixiu.aplp.Bean.User.SignBean" >
+        insert INTO user_admin(
+            id,name,phone,email,password
+        )values(
+            #{id},#{name},#{phone},#{email},#{password}
+        )
+    </insert>
+
+    <select id="selectAdminBySign" resultType="xyz.zixiu.aplp.Bean.User.AdminBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        select * from user_admin where ${basis}=#{id} and password=#{password}
+    </select>
+</mapper>

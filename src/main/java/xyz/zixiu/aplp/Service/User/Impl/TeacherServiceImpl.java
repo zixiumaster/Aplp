@@ -2,13 +2,10 @@ package xyz.zixiu.aplp.Service.User.Impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import xyz.zixiu.aplp.Bean.User.Sign;
-import xyz.zixiu.aplp.Bean.User.Student;
-import xyz.zixiu.aplp.Bean.User.Teacher;
-import xyz.zixiu.aplp.Dao.User.StudentMapper;
+import xyz.zixiu.aplp.Bean.User.SignBean;
+import xyz.zixiu.aplp.Bean.User.TeacherBean;
 import xyz.zixiu.aplp.Dao.User.TeacherMapper;
-import xyz.zixiu.aplp.Service.User.StudentService;
-import xyz.zixiu.aplp.Service.User.TeacherService;
+import xyz.zixiu.aplp.Service.User.Interface.TeacherService;
 
 import javax.annotation.Resource;
 
@@ -21,18 +18,25 @@ public class TeacherServiceImpl implements TeacherService {
     private TeacherMapper mapper;
 
     @Override
-    public void register(Teacher bean) {
-            mapper.saveTeacher(bean);
+    public Boolean register(SignBean sign) {
+        try{
+            sign.basisID();
+            System.out.println(sign.toString());
+            mapper.saveTeacher(sign);
+            return true;
+        }catch (Exception e){
+            System.err.println("\n\n"+e+"\n\n");
+            return false;
+        }
     }
 
     @Override
-    public Boolean login(Sign sign) {
-            Teacher log=mapper.selectTeacherBySign(sign);
+    public Boolean login(SignBean sign) {
+            TeacherBean log=mapper.selectTeacherBySign(sign);
             if (log == null){
-                System.out.println("\n\nuser does not exist or The password is incorrect\nTeacher Login no\n\n");
+                System.out.println("\n\nTeacher Login no\n\n");
                 return false;
             }else{
-                System.out.println(log.toString());
                 System.out.println("\n\nTeacher Login yes\n\n");
                 return true;
             }

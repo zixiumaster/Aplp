@@ -6,16 +6,16 @@
 <mapper namespace="xyz.zixiu.aplp.Dao.User.TeacherMapper">
 
     <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
-    <insert id="saveTeacher" parameterType="xyz.zixiu.aplp.Bean.User.Teacher" >
-        insert INTO userteacher(
+    <insert id="saveTeacher" parameterType="xyz.zixiu.aplp.Bean.User.SignBean" >
+        insert INTO user_teacher(
             id,name,phone,email,password
         )values(
             #{id},#{name},#{phone},#{email},#{password}
         )
     </insert>
 
-    <select id="selectTeacherBySign" resultType="xyz.zixiu.aplp.Bean.User.Teacher" parameterType="xyz.zixiu.aplp.Bean.User.Sign">
-        select * from userteacher where ${basis}=#{value} and password=#{password}
+    <select id="selectTeacherBySign" resultType="xyz.zixiu.aplp.Bean.User.TeacherBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        select * from user_teacher where ${basis}=#{id} and password=#{password}
     </select>
 
 </mapper>

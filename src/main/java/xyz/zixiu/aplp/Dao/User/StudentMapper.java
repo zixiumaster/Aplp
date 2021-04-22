@@ -1,13 +1,13 @@
 package xyz.zixiu.aplp.Dao.User;
 
-import xyz.zixiu.aplp.Bean.User.Sign;
-import xyz.zixiu.aplp.Bean.User.Student;
+import xyz.zixiu.aplp.Bean.User.SignBean;
+import xyz.zixiu.aplp.Bean.User.StudentBean;
 
 public interface StudentMapper {
 
-    public void saveStudent(Student bean);
+    public void saveStudent(SignBean bean);
 
-    public Student selectStudentBySign(Sign sign);
+    public StudentBean selectStudentBySign(SignBean sign);
 
 
 }

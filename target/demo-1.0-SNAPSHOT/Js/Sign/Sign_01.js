@@ -3,47 +3,86 @@ var VerificationCode;
 
 
 //登录提交
-function toLogin(){
+function toLogin() {
 	//先检查验证码
-	if(checkVerificationCode()){
-		//获取文本信息并制作出Json
-		function getLoginSign() {
-			var idText = document.getElementById("id").value;
-			var pwdText = document.getElementById("pwd").value;
-			var idType = "id";
+	if (checkVerificationCode()) {
+		// //获取文本信息并制作出Json
+		// function getLoginSign() {
+		// 	var idText = document.getElementById("id").value;
+		// 	var pwdText = document.getElementById("pwd").value;
+		// 	var idType = "id";
+		// 	if (checkEmail(idText)) {
+		// 		idType = "Email";
+		// 	} else if (checkMobile(idText)) {
+		// 		idType = "phone";
+		// 	}
+		// 	var ret = new Object();
+		// 	ret.basis = idType;
+		// 	ret.value = idText;
+		// 	ret.password = pwdText;
+		// 	return JSON.stringify(ret);
+		// }
+		// $.ajax({
+		// 	url: "http://localhost:8080/Aplp_war/Login/test_01.action",
+		// 	contentType: "application/json",
+		// 	data: getText(),
+		// 	//dataType: "text",
+		// 	dataType: "json",
+		// 	type: "POST",
+		// 	success: function(a) {
+		// 		console.log(a.password);
+		// 	},
+		// 	error: function(XMLResponse) {
+		// 		console.log(XMLResponse.responseText);
+		// 	}
+		// });
+	}
+}
+
+//注册提交
+function toRegister() {
+	var idText = document.getElementById("id").value;
+	var pwdText = document.getElementById("pwd").value;
+	var type = document.getElementById("type").value;
+	var idType = "id";
+
+	//检查ID空值
+	if(idText=="" || idText==null){
+		alert("ID不可为空");
+
+	//检查确认密码
+	}else if (checkPassword()) {
+		function getSign() {
 			if (checkEmail(idText)) {
-				idType = "Email";
+				idType = "email";
 			} else if (checkMobile(idText)) {
 				idType = "phone";
 			}
 			var ret = new Object();
+			ret.role=type;
 			ret.basis = idType;
-			ret.value = idText;
+			ret.id = idText;
 			ret.password = pwdText;
 			return JSON.stringify(ret);
 		}
 		$.ajax({
-			url: "http://localhost:8080/Aplp_war/Login/test_01.action",
+			url: "http://localhost:8080/Aplp_war/Sign/toRegister.action",
 			contentType: "application/json",
-			data: getText(),
-			//dataType: "text",
-			dataType: "json",
+			data: getSign(),
+			dataType: "text",
 			type: "POST",
-			success: function(a) {
-				console.log(a.password);
+			success: function(data) {
+				if(data=="yes"){
+					goLogin();
+				}else{
+					alert("注册失败，请检查注册信息，有可能是ID/手机号/邮箱重复注册等原因");
+					goRegister();
+				}
 			},
 			error: function(XMLResponse) {
 				console.log(XMLResponse.responseText);
 			}
 		});
-	}
-}
-
-//注册提交
-function toRegister(){
-	//先检查确认密码
-	if(checkPassword()){
-		
 	}
 }
 
@@ -90,13 +129,29 @@ function goRegister() {
 function checkPassword() {
 	var pwdText = document.getElementById("pwd").value;
 	var checkpwdText = document.getElementById("checkpwd").value;
+	
+	// 校验密码：只能输入8-20个字母、数字、下划线
+	function isPasswd(s) {
+		var patrn = /^(\w){8,20}$/;
+		if (!patrn.exec(s)) return false
+		return true
+	}
+	
 	if (pwdText == checkpwdText) {
-		alert("sssssssssss");
-		return true;
+		if(isPasswd(pwdText)){
+			return true;
+		}else{
+			alert("密码不符合规范，密码只能由8-20个字母、数字、下划线组成");
+			return false;
+		}
+		
 	} else {
+		alert("密码与确认密码不一致");
 		return false;
 	}
+	
 }
+
 
 
 //检测邮箱格式 

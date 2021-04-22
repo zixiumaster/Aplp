@@ -14,8 +14,9 @@
 
                 <property name="mapperLocations"  >
                         <array>
-                                <value>classpath:mapper/user/StudentMapper.xml</value>
-                                <value>classpath:mapper/user/TeacherMapper.xml</value>
+                                <value>classpath:mapper/User/StudentMapper.xml</value>
+                                <value>classpath:mapper/User/TeacherMapper.xml</value>
+                                <value>classpath:mapper/User/AdminMapper.xml</value>
                         </array>
                 </property>
         </bean>
