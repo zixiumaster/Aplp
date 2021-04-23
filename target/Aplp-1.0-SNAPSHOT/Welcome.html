@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)https://www.17sucai.com/preview/1424582/2020-07-03/231/index.html -->
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Welcome</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<script type="text/javascript" src="Js/Public/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="Js/Public/three.min.js"></script>
+		<script type="text/javascript" src="Js/Effect/EffectParticleJump.js"></script>
+		<script type="text/javascript" src="Js/Sign/Sign_01.js"></script>
+		<link rel="stylesheet" type="text/css" href="Css/Sign/Sign_01.css" />
+		<link rel="stylesheet" type="text/css" href="Css/Sign/Sign_02.css" />
+		<script  type="text/javascript" src="../Js/Effect/EffectParticle.js"></script>
+	</head>
+	<body>
+		<div class="main" id="main">
+			<div class="text" id="startText">
+				
+			</div>
+			<script type="text/javascript">
+				window.onload = function() {
+					var textArray=new Array("Assembly","language","Programming","Learning","platform");
+					var textHtml="";
+					for(var i=0;i<textArray.length;i++){
+						for(var j=0;j<textArray[i].length;j++){
+							textHtml=textHtml+"<span>"+textArray[i][j]+"</span>";
+						}
+						textHtml=textHtml+"<span>&nbsp;</span>";
+					}
+					var textObject = document.getElementById("startText");
+					textObject.innerHTML=textHtml;
+					var jump = setTimeout(goLogin, 2000);
+				}
+			</script>
+		</div>
+	</body>
+</html>

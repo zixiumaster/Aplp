@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace要与接口类名对应 -->
+<mapper namespace="xyz.zixiu.aplp.Dao.DB.DBMapper">
+    <select id="CheckAplp" resultType ="java.lang.Integer">
+        select COUNT(*)
+        from information_schema.SCHEMATA
+        where SCHEMA_NAME = 'aplp';
+    </select>
+
+    <update id="CreateAplp" >
+        create database aplp
+    </update>
+
+    <delete id="DropAplp" >
+        drop database aplp
+    </delete>
+
+</mapper>
