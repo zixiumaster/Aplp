@@ -8,10 +8,12 @@
        https://www.springframework.org/schema/context/spring-context.xsd">
 
 
-        <import resource="applicationContext/ac-DataSource.xml"/>
+        <import resource="ApplicationContext/ac-DataSource.xml"/>
 
-        <import resource="applicationContext/ac-SqlSessionsFactoryUser.xml"/>
+        <import resource="ApplicationContext/ac-SqlSessionsFactoryUser.xml"/>
 
-        <import resource="applicationContext/ac-Transaction.xml"/>
+        <import resource="ApplicationContext/ac-Transaction.xml"/>
+
+        <import resource="ApplicationContext/ac-AnnotationUser.xml"/>
 
 </beans>

@@ -1,9 +1,7 @@
 package xyz.zixiu.aplp.Service.User.Interface;
 
-import org.springframework.stereotype.Repository;
 import xyz.zixiu.aplp.Bean.User.SignBean;
 
-@Repository
 public interface StudentService {
 
     public Boolean register(SignBean bean);

@@ -9,7 +9,7 @@ import xyz.zixiu.aplp.Service.User.Interface.StudentService;
 
 import javax.annotation.Resource;
 
-@Service("StudentService") //标记注入
+@Service //标记注入
 @Transactional //加入事务管理
 public class StudentServiceImpl implements StudentService {
 
@@ -41,6 +41,4 @@ public class StudentServiceImpl implements StudentService {
                 return true;
             }
     }
-
-
 }
