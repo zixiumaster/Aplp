@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9085bbc-3143-40fa-92d5-36a37b73eb25" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Sign/Sign_01.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Sign/Sign_01.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Aplp" />
       <extension name="coverage">
@@ -200,10 +215,22 @@
       <workItem from="1619152226519" duration="10038000" />
       <workItem from="1619163010915" duration="5196000" />
       <workItem from="1619170142221" duration="1643000" />
+      <workItem from="1619178346966" duration="1339000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

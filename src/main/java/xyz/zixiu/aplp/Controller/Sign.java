@@ -11,6 +11,7 @@ import xyz.zixiu.aplp.Service.User.Impl.StudentServiceImpl;
 import xyz.zixiu.aplp.Service.User.Interface.AdminService;
 import xyz.zixiu.aplp.Service.User.Interface.StudentService;
 import xyz.zixiu.aplp.Service.User.Interface.TeacherService;
+import xyz.zixiu.aplp.Service.User.UserService;
 
 import javax.annotation.Resource;
 
@@ -18,21 +19,11 @@ import javax.annotation.Resource;
 @RequestMapping("/Sign")
 public class Sign {
 
-
-
+    UserService us=new UserService();
 
     @RequestMapping("/goLogin")
     public String goLogin(){
         System.out.println("\n\ngoLogin\n\n");
-
-        StudentService s;
-        TeacherService t;
-        AdminService a;
-        ApplicationContext ac_User = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext-User.xml");
-        s = (StudentService)ac_User.getBean("StudentService");
-        t = (TeacherService)ac_User.getBean("TeacherService");
-        a =(AdminService) ac_User.getBean("AdminService");
-        s.register(new SignBean("Student","email",null,"qwertyuik"));
         return "Html/Sign/Login.html";
     }
 
@@ -46,18 +37,17 @@ public class Sign {
     public @ResponseBody
     String toRegister(@RequestBody SignBean user) {
         System.out.println(user.toString());
-        String a="01";
-       // studentService.register(new SignBean("Student","email",null,a));
+
         try {
             if (user.getRole() == null) {
                 return "no";
             } else if (user.getRole().equals("Admin")) {
                 return "no";
             } else if (user.getRole().equals("Teacher")) {
-
+                us.teacherService.register(user);
                 return "yes";
             } else if (user.getRole().equals("Student")) {
-
+                us.studentService.register(user);
                 return "yes";
             } else {
                 return "no";

@@ -116,6 +116,22 @@ body {
 	 color: #000000;
 	 float: left;
  }
+option{
+	 display: block;
+	 margin: 10px 0 32px 70px;
+	 width: 70px;
+	 height: 42px;
+	 background-color: #ffffff;
+	 border-radius: 10px;
+	 opacity: 0.9;
+	 border: 0;
+	 font-size: 16px;
+	 outline: none;
+	 padding-left: 10px;
+	 color: #000000;
+	 float: left;
+ }
+ 
  
 .sign-con>.btn {
 	float: left;
