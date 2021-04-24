@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9085bbc-3143-40fa-92d5-36a37b73eb25" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Css/Sign/Sign_01.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Css/Sign/Sign_01.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/test/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/tool/SpringBeanFactoryUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT/WEB-INF/classes/xyz/zixiu/aplp/Controller/Sign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Aplp-1.0-SNAPSHOT/WEB-INF/classes/xyz/zixiu/aplp/Controller/Sign.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/xyz/zixiu/aplp/Controller/Sign.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/xyz/zixiu/aplp/Controller/Sign.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +80,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,6 +221,7 @@
       <workItem from="1619163010915" duration="5196000" />
       <workItem from="1619170142221" duration="1643000" />
       <workItem from="1619178346966" duration="1339000" />
+      <workItem from="1619238272057" duration="1750000" />
     </task>
     <servers />
   </component>
@@ -232,5 +238,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
