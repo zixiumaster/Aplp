@@ -31,14 +31,14 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public Boolean login(SignBean sign) {
+    public AdminBean login(SignBean sign) {
         AdminBean log=mapper.selectAdminBySign(sign);
             if (log == null){
                 System.out.println("\n\nAdmin Login no\n\n");
-                return false;
+                return null;
             }else{
                 System.out.println("\n\nAdmin Login yes\n\n");
-                return true;
+                return log;
             }
     }
 

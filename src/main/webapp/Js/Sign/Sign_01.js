@@ -1,8 +1,6 @@
 //验证码的值
 var VerificationCode;
 
-var urlRoot="http://localhost:8080/Aplp/";
-
 //登录提交
 function toLogin() {
 	var idText = document.getElementById("id").value;
@@ -150,11 +148,6 @@ function goRegister() {
 	});
 }
 
-//登录成功。跳转到主界面
-function goMajor(){
-	var urlPath=urlRoot+"Major/goMajor.action";
-	window.open(urlPath);
-}
 
 //检查确认密码
 function checkPassword() {
@@ -182,7 +175,6 @@ function checkPassword() {
 	}
 
 }
-
 
 
 //检测邮箱格式

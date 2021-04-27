@@ -19,6 +19,8 @@ public class SignBean extends UserBean {
 
     public SignBean(){}
 
+
+
     public void basisID(){
 
         if( ( basis != "" && basis != null ) && ( id != "" && id != null ) ){

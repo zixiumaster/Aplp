@@ -31,14 +31,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Boolean login(SignBean sign) {
+    public StudentBean login(SignBean sign) {
             StudentBean log=mapper.selectStudentBySign(sign);
             if (log == null){
                 System.out.println("\n\nStudent Login no\n\n");
-                return false;
+                return null;
             }else{
                 System.out.println("\n\nStudent Login yes\n\n");
-                return true;
+                return log;
             }
     }
 }

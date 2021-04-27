@@ -16,6 +16,7 @@ public class UserService {
         studentService = (StudentService)ac_User.getBean("StudentService");
         teacherService = (TeacherService)ac_User.getBean("TeacherService");
         adminService =(AdminService) ac_User.getBean("AdminService");
+        System.out.println("\n\nUserService is check ok !\n\n");
     }
 
 }
