@@ -14,7 +14,6 @@ var windowHalfY = window.innerHeight / 2;
 $(function() {
 	init(); //初始化
 	animate(); //动画效果
-	change(); //验证码
 });
 
 //初始化
