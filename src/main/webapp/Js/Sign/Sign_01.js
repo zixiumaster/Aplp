@@ -32,6 +32,7 @@ function toLogin() {
 			ret.password = pwdText;
 			return JSON.stringify(ret);
 		}
+
 		var urlPath=urlRoot+"Sign/toLogin.action";
 		$.ajax({
 			url: urlPath,
@@ -42,6 +43,9 @@ function toLogin() {
 			success: function(data) {
 				if(data!=null){
 					alert("登录成功，正在跳转");
+
+					//登录成功后，把用户信息写入到cookie里面
+					setCookieUser(type,idType,idText);
 					goMajor();
 				}else{
 					alert("登陆失败");

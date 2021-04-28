@@ -17,23 +17,20 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <title>dome</title>
     <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/"/>
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+    <script class="include" type="text/javascript" src="Js/Main/jquery.nicescroll.js"></script>
+    <script class="include" type="text/javascript" src="Js/Main/jquery.sparkline.js"></script>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
 
-
+    <script class="include" type="text/javascript" src="Js/Main/Main_01.js"></script>
     <link rel="stylesheet" type="text/css" href="Css/Main/Main_01.css"/>
 
-    <script class="include" type="text/javascript" src="Js/Main/Main_01.js"></script>
-    <script class="include" type="text/javascript" src="Js/Main/Main_01.js"></script>
-
-    <script class="include" type="text/javascript" src="Js/Main/jquery.nicescroll.js"></script>
-
-    <script class="include" type="text/javascript" src="Js/Main/jquery.sparkline.js"></script>
-
+    <script class="include" type="text/javascript" src="Js/Page/PageValue.js"></script>
+    <script class="include" type="text/javascript" src="Js/Page/PageCookie.js"></script>
+    <script class="include" type="text/javascript" src="Js/Main/MainFun/MainFunAjax.js"></script>
 
 </head>
 <body>
@@ -47,7 +44,8 @@
         <!-- 菜单栏开关 -->
         <div class="sidebar-toggle-box">
             <div class=" fa fa-bars tooltips">
-                我是Icon
+                <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -330px -95px ;zoom: 0.8;">
+                </div>
             </div>
         </div>
         <!-- 菜单栏开关 -->
@@ -55,7 +53,7 @@
         <!-- LOGO -->
         <a href="#" class="logo">
             <b class="fa fa-bars tooltips">
-                APLP
+                <img src="Img/logo.png" style="width: 2em;margin-top: 0.1em;"/>
             </b>
         </a>
         <!-- LOGO -->
@@ -70,11 +68,11 @@
                     <!-- Icon和上角标 -->
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="fa fa-tasks">
-                            此处是进度条Icon
+                            <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -170px -310px ;-webkit-transform:rotate(90deg);zoom: 0.7;"></div>
                         </i>
                         <span class="badge bg-theme">
-									1
-								</span>
+                            1
+                        </span>
                     </a>
                     <!-- Icon和上角标 -->
 
@@ -120,11 +118,13 @@
                     <!-- Icon和上角标 -->
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="fa fa-envelope-o">
-                            此处是邮件Icon
+                            <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -22px -435px ;zoom: 0.7;">
+
+                            </div>
                         </i>
                         <span class="badge bg-theme">
-									1
-								</span>
+                            1
+                        </span>
                     </a>
                     <!-- Icon和上角标 -->
 
@@ -143,22 +143,21 @@
 
                                 <!-- 发消息人头像 -->
                                 <span class="photo">
-											<span>我是logo</span>
-                                    <!-- <img alt="avatar" src="../../Img/agentLogo.png"> -->
-										</span>
+									<img alt="avatar" src="Img/UserLogo.png">
+                                </span>
                                 <!-- 发消息人头像 -->
 
                                 <!-- 发消息人和时间 -->
                                 <span class="subject">
-											<span class="from">我是用户名</span>
-											<span class="time">我是时间</span>
-										</span>
+                                    <span class="from">UserName</span>
+                                    <span class="time">2021.01.01</span>
+                                </span>
                                 <!-- 发消息人和时间 -->
 
                                 <!-- 消息内容 -->
                                 <span class="message">
-											Test
-										</span>
+                                    TestText TestText TestText TestText
+                                </span>
                                 <!-- 消息内容 -->
                             </a>
                         </li>
@@ -204,15 +203,14 @@
                 <!-- 登录人头像 -->
                 <p class="centered">
                     <a href="#">
-                        <span>我是logo</span>
-                        <!-- <img src="../../Img/agentLogo.png" class="img-circle" width="60"> -->
+                        <img alt="avatar" src="Img/UserLogo.png">
                     </a>
                 </p>
                 <!-- 登录人头像 -->
 
                 <!-- 登录人用户名 -->
-                <h5 class="centered">
-                    我是用户名
+                <h5 class="centered" id="pageUser">
+                    UserName
                 </h5>
                 <!-- 登录人用户名 -->
 
@@ -232,9 +230,9 @@
                 <li class="sub-menu dcjq-parent-li">
                     <!-- 按钮标题 -->
                     <a href="javascript:;" class="dcjq-parent" style="font-size:1.5em;">
-								<span>
-									个人资料
-								</span>
+                        <span>
+                            个人资料
+                        </span>
                     </a>
                     <!-- 按钮标题 -->
 
@@ -262,13 +260,17 @@
     <!-- 菜单栏 -->
 
 
-
 </section>
 <!-- 页面 -->
 
 <!-- 加载滚动条 -->
 <script class="include" type="text/javascript" src="Js/Main/Main_02.js"></script>
 <!-- 加载滚动条 -->
+
+//加载页面，注入信息
+<script>
+    loadCookieUser();
+</script>
 
 </body>
 </html>

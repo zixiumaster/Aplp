@@ -31,39 +31,39 @@ a, a:hover, a:focus {
     width: 100%;
     height: 100%;
 }
-.copyrights{
-	text-indent:-9999px;
-	height:0;
-	line-height:0;
-	font-size:0;
-	overflow:hidden;
-}
+/*.copyrights{*/
+/*	text-indent:-9999px;*/
+/*	height:0;*/
+/*	line-height:0;*/
+/*	font-size:0;*/
+/*	overflow:hidden;*/
+/*}*/
 /* Bootstrap Modifications */
-.modal-header {
-	background: #68dff0;
-}
+/*.modal-header {*/
+/*	background: #68dff0;*/
+/*}*/
 
-.modal-title {
-	color: white;
-}
+/*.modal-title {*/
+/*	color: white;*/
+/*}*/
 
-.btn-round {
-	border-radius: 20px;
-	-webkit-border-radius: 20px;
-}
+/*.btn-round {*/
+/*	border-radius: 20px;*/
+/*	-webkit-border-radius: 20px;*/
+/*}*/
 
-.accordion-heading .accordion-toggle {
-	display: block;
-	cursor: pointer;
-	border-top: 1px solid #F5F5F5;
-	padding: 5px 0px;
-	line-height: 28.75px;
-	text-transform: uppercase;
-	color: #1a1a1a;
-	background-color: #ffffff;
-	outline: none !important;
-	text-decoration: none;
-}	
+/*.accordion-heading .accordion-toggle {*/
+/*	display: block;*/
+/*	cursor: pointer;*/
+/*	border-top: 1px solid #F5F5F5;*/
+/*	padding: 5px 0px;*/
+/*	line-height: 28.75px;*/
+/*	text-transform: uppercase;*/
+/*	color: #1a1a1a;*/
+/*	background-color: #ffffff;*/
+/*	outline: none !important;*/
+/*	text-decoration: none;*/
+/*}	*/
 
 
 
@@ -249,29 +249,29 @@ ul.top-menu > li > .logout {
 }
 
 /*LEFT NAVIGATION ICON*/
-.dcjq-icon {
-    height:17px;
-    width:17px;
-    display:inline-block;
-    background: url("../img/nav-expand.png") no-repeat top;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-    position:absolute;
-    right:10px;
-    top:15px;
-}
-.active .dcjq-icon {
-    background: url("../img/nav-expand.png") no-repeat bottom;
-    border-radius:3px;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
-}
+/*.dcjq-icon {*/
+/*    height:17px;*/
+/*    width:17px;*/
+/*    display:inline-block;*/
+/*    background: url("/img/nav-expand.png") no-repeat top;*/
+/*    border-radius:3px;*/
+/*    -moz-border-radius:3px;*/
+/*    -webkit-border-radius:3px;*/
+/*    position:absolute;*/
+/*    right:10px;*/
+/*    top:15px;*/
+/*}*/
+/*.active .dcjq-icon {*/
+/*    background: url("../img/nav-expand.png") no-repeat bottom;*/
+/*    border-radius:3px;*/
+/*    -moz-border-radius:3px;*/
+/*    -webkit-border-radius:3px;*/
+/*}*/
 /*---*/
 
-.nav-collapse.collapse {
-    display: inline;
-}
+/*.nav-collapse.collapse {*/
+/*    display: inline;*/
+/*}*/
 
 ul.sidebar-menu , ul.sidebar-menu li ul.sub{
     margin: -2px 0 0;
@@ -508,7 +508,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     .dropdown-menu.extended  {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
     };
-    }
+}
 
 .dropdown-menu.extended li p {
     background-color: #F1F2F7;
@@ -592,7 +592,12 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
 .dropdown-menu.inbox li a .message {
     display: block !important;
+    width: auto;
     font-size: 11px;
+    overflow: hidden;
+
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .top-nav  {
@@ -740,6 +745,10 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .sidebar-toggle-box .fa-bars {
+    margin: 0.5em;
+    margin-bottom: 0em;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
     display: inline-block;
     font-size: 20px;
@@ -2439,19 +2448,19 @@ div.zabuto_calendar .table tr td.event-clickable {
 }
 
 /* badge */
-div.zabuto_calendar .badge-today,
-div.zabuto_calendar div.legend span.badge-today {
-    background-color:;
-    color: #ffffff;
-    text-shadow: none;
-}
+/*div.zabuto_calendar .badge-today,*/
+/*div.zabuto_calendar div.legend span.badge-today {*/
+/*    background-color:;*/
+/*    color: #ffffff;*/
+/*    text-shadow: none;*/
+/*}*/
 
-div.zabuto_calendar .badge-event,
-div.zabuto_calendar div.legend span.badge-event {
-    background-color:;
-    color: #ffffff;
-    text-shadow: none;
-}
+/*div.zabuto_calendar .badge-event,*/
+/*div.zabuto_calendar div.legend span.badge-event {*/
+/*    background-color:;*/
+/*    color: #ffffff;*/
+/*    text-shadow: none;*/
+/*}*/
 
 div.zabuto_calendar .badge-event {
     font-size: 0.95em;
