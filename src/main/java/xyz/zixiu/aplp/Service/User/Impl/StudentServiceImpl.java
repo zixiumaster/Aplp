@@ -41,4 +41,27 @@ public class StudentServiceImpl implements StudentService {
                 return log;
             }
     }
+
+    @Override
+    public boolean updateperson(SignBean sign){
+        try {
+            mapper.updateStudentbyUserBean(sign);
+            System.out.println("mapper is ok");
+            return true;
+        } catch (Exception e) {
+            System.out.println("mapper not ok");
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updatepassword(SignBean sign){
+        try {
+            mapper.updateStudentPasswordbyUserBean(sign);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

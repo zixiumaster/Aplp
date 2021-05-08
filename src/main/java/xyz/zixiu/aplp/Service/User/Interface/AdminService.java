@@ -11,5 +11,8 @@ public interface AdminService {
 
     public AdminBean login(SignBean sign);
 
+    public boolean updateperson(SignBean sign);
+
+    public boolean updatepassword(SignBean sign);
 
 }

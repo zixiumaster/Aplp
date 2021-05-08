@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <title>dome</title>
+    <title>Aplp</title>
     <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/"/>
     <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -27,11 +27,11 @@
 
     <script class="include" type="text/javascript" src="Js/Main/Main_01.js"></script>
     <link rel="stylesheet" type="text/css" href="Css/Main/Main_01.css"/>
-
+    <link rel="stylesheet" type="text/css" href="Css/Main/Main_02.css"/>
     <script class="include" type="text/javascript" src="Js/Page/PageValue.js"></script>
     <script class="include" type="text/javascript" src="Js/Page/PageCookie.js"></script>
     <script class="include" type="text/javascript" src="Js/Main/MainFun/MainFunAjax.js"></script>
-
+    <script class="include" type="text/javascript" src="Js/Main/MainFun/MainFunAjaxFrom.js"></script>
 </head>
 <body>
 
@@ -44,16 +44,16 @@
         <!-- 菜单栏开关 -->
         <div class="sidebar-toggle-box">
             <div class=" fa fa-bars tooltips">
-                <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -330px -95px ;zoom: 0.8;">
+                <div style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -330px -95px ;zoom: 0.8;">
                 </div>
             </div>
         </div>
         <!-- 菜单栏开关 -->
 
         <!-- LOGO -->
-        <a href="#" class="logo">
+        <a  class="logo">
             <b class="fa fa-bars tooltips">
-                <img src="Img/logo.png" style="width: 2em;margin-top: 0.1em;"/>
+                <img src="Img/Page/logo.png" id="PageLogo" style="width: 2em;margin-top: 0.1em;"/>
             </b>
         </a>
         <!-- LOGO -->
@@ -66,9 +66,9 @@
                 <li class="dropdown">
 
                     <!-- Icon和上角标 -->
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <a data-toggle="dropdown" class="dropdown-toggle" >
                         <i class="fa fa-tasks">
-                            <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -170px -310px ;-webkit-transform:rotate(90deg);zoom: 0.7;"></div>
+                            <div style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -170px -310px ;-webkit-transform:rotate(90deg);zoom: 0.7;"></div>
                         </i>
                         <span class="badge bg-theme">
                             1
@@ -88,7 +88,7 @@
 
                         <!-- 进度条信息框 -->
                         <li>
-                            <a href="#">
+                            <a >
                                 <!-- 文字说明 -->
                                 <div class="task-info">
                                     <div class="desc">title</div>
@@ -116,9 +116,9 @@
                 <li id="header_inbox_bar" class="dropdown">
 
                     <!-- Icon和上角标 -->
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <a data-toggle="dropdown" class="dropdown-toggle" >
                         <i class="fa fa-envelope-o">
-                            <div style="width:2.4em;height: 2.3em;background: url(Img/Icon_01.png) -22px -435px ;zoom: 0.7;">
+                            <div style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -22px -435px ;zoom: 0.7;">
 
                             </div>
                         </i>
@@ -139,11 +139,11 @@
 
                         <!-- 消息框 -->
                         <li>
-                            <a href="#">
+                            <a>
 
                                 <!-- 发消息人头像 -->
                                 <span class="photo">
-									<img alt="avatar" src="Img/UserLogo.png">
+									<img alt="avatar" src="Img/User/IconUserDefault.png">
                                 </span>
                                 <!-- 发消息人头像 -->
 
@@ -183,7 +183,7 @@
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
                 <li>
-                    <a class="logout" href="#">
+                    <a class="logout" href="" onclick="goWelcome();">
                         Logout
                     </a>
                 </li>
@@ -202,8 +202,8 @@
 
                 <!-- 登录人头像 -->
                 <p class="centered">
-                    <a href="#">
-                        <img alt="avatar" src="Img/UserLogo.png">
+                    <a href="" id="PageUserPhoto">
+                        <img alt="avatar" src="Img/User/IconUserDefault.png">
                     </a>
                 </p>
                 <!-- 登录人头像 -->
@@ -218,7 +218,7 @@
                 <li class="mt">
 
                     <!-- 按钮标题 -->
-                    <a class="active" href="#" style="font-size:1.5em;">
+                    <a class="active" href="" onclick="goMajor();" style="font-size:1.5em;">
                         <span>首页</span>
                     </a>
                     <!-- 按钮标题 -->
@@ -226,32 +226,8 @@
                 </li>
                 <!-- 首页按钮 -->
 
-                <!-- 个人资料子菜单 -->
-                <li class="sub-menu dcjq-parent-li">
-                    <!-- 按钮标题 -->
-                    <a href="javascript:;" class="dcjq-parent" style="font-size:1.5em;">
-                        <span>
-                            个人资料
-                        </span>
-                    </a>
-                    <!-- 按钮标题 -->
 
-                    <!-- 菜单子项 -->
-                    <ul class="sub" style="display: none;">
-                        <li>
-                            <a href="#" style="font-size:1.2em;">基本信息</a>
-                        </li>
-                        <li>
-                            <a href="#" style="font-size:1.2em;">班级信息</a>
-                        </li>
-                        <li>
-                            <a href="#" style="font-size:1.2em;">任课信息</a>
-                        </li>
-                    </ul>
-                    <!-- 菜单子项 -->
 
-                </li>
-                <!-- 个人资料子菜单 -->
 
 
             </ul>
@@ -259,18 +235,27 @@
     </aside>
     <!-- 菜单栏 -->
 
+    <section id="main-content">
+        <section class="wrapper" id="mainblock">
+
+        </section>
+    </section>
+
 
 </section>
 <!-- 页面 -->
 
-<!-- 加载滚动条 -->
-<script class="include" type="text/javascript" src="Js/Main/Main_02.js"></script>
-<!-- 加载滚动条 -->
-
-//加载页面，注入信息
+<%--加载页面，注入信息--%>
 <script>
     loadCookieUser();
+    loadToolMenu(getCookieUser().role);
+    loadingRefresh();
 </script>
+<%--加载页面，注入信息--%>
 
+
+<!-- 加载滚动条 and 菜单展开功能 -->
+<script class="include" type="text/javascript" src="Js/Main/Main_02.js"></script>
+<!-- 加载滚动条 -->
 </body>
 </html>

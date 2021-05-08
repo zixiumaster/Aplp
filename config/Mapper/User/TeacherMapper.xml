@@ -18,4 +18,12 @@
         select * from user_teacher where ${basis}=#{id} and password=#{password}
     </select>
 
+    <update id="updateTeacherbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        update user_teacher set id=#{id},name=#{name},phone=#{phone},email=#{email} where ${basis}=#{attachment}
+    </update>
+
+    <update id="updateTeacherPasswordbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        update user_teacher set password=#{password} where ${basis}=#{id}
+    </update>
+
 </mapper>

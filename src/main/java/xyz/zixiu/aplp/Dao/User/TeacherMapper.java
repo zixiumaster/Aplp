@@ -7,7 +7,11 @@ public interface TeacherMapper {
 
     public void saveTeacher(SignBean bean);
 
-    public  TeacherBean selectTeacherBySign(SignBean sign);
+    public TeacherBean selectTeacherBySign(SignBean sign);
+
+    public void updateTeacherbyUserBean(SignBean sign);
+
+    public void updateTeacherPasswordbyUserBean(SignBean sign);
 
 
 }

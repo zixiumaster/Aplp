@@ -8,6 +8,9 @@ public class SignBean extends UserBean {
     //id类型
     private String basis;
 
+    //放置一些附属信息
+    private String attachment;
+
     //注册Sign reg
     public SignBean(String regRole,String regBasis,String regId,String regPassword){
         this.role=regRole;
@@ -19,7 +22,41 @@ public class SignBean extends UserBean {
 
     public SignBean(){}
 
+    public void setAdminBean(AdminBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+        this.password=user.getPassword();
+    }
+    public void setStudentBean(StudentBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+        this.password=user.getPassword();
+    }
+    public void setTeacherBean(TeacherBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+        this.password=user.getPassword();
+    }
 
+    @Override
+    public String toString() {
+        return "SignBean{" +
+                "role='" + role + '\'' +
+                ", basis='" + basis + '\'' +
+                ", attachment='" + attachment + '\'' +
+                ", id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 
     public void basisID(){
 
@@ -58,17 +95,13 @@ public class SignBean extends UserBean {
         this.basis = basis;
     }
 
-
-    @Override
-    public String toString() {
-        return "SignBean{" +
-                "role='" + role + '\'' +
-                ", basis='" + basis + '\'' +
-                ", id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getAttachment() {
+        return attachment;
     }
+
+    public void setAttachment(String attachment) {
+        this.attachment = attachment;
+    }
+
+
 }

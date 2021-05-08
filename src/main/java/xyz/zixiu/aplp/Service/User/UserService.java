@@ -7,16 +7,16 @@ import xyz.zixiu.aplp.Service.User.Interface.StudentService;
 import xyz.zixiu.aplp.Service.User.Interface.TeacherService;
 
 public class UserService {
+
+    public AdminService adminService;
     public StudentService studentService;
     public TeacherService teacherService;
-    public AdminService adminService;
 
     public UserService(){
         ApplicationContext ac_User = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext-User.xml");
+        adminService =(AdminService) ac_User.getBean("AdminService");
         studentService = (StudentService)ac_User.getBean("StudentService");
         teacherService = (TeacherService)ac_User.getBean("TeacherService");
-        adminService =(AdminService) ac_User.getBean("AdminService");
-        System.out.println("\n\nUserService is check ok !\n\n");
     }
 
 }

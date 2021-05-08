@@ -15,6 +15,25 @@ public class UserBean {
         this.password = password;
     }
 
+    public UserBean(AdminBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+    }
+    public UserBean(TeacherBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+    }
+    public UserBean(StudentBean user){
+        this.id =user.getId();
+        this.name=user.getName();
+        this.email=user.getEmail();
+        this.phone= user.getPhone();
+    }
+
     public UserBean() { }
 
     public String getId() {
@@ -57,4 +76,14 @@ public class UserBean {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "UserBean{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

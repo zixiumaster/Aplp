@@ -42,5 +42,24 @@ public class AdminServiceImpl implements AdminService {
             }
     }
 
+    @Override
+    public boolean updateperson(SignBean sign){
+        try {
+            mapper.updateAdminbyUserBean(sign);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updatepassword(SignBean sign){
+        try {
+            mapper.updateAdminPasswordbyUserBean(sign);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 }

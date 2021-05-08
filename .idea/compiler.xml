@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Aplp" />
+        <module name="Nacos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Aplp" target="1.8" />
+      <module name="AppMongodb" target="8" />
+      <module name="AppsRPC" target="8" />
+      <module name="MongoApps" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

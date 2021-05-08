@@ -42,5 +42,24 @@ public class TeacherServiceImpl implements TeacherService {
             }
     }
 
+    @Override
+    public boolean updateperson(SignBean sign){
+        try {
+            mapper.updateTeacherbyUserBean(sign);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updatepassword(SignBean sign){
+        try {
+            mapper.updateTeacherPasswordbyUserBean(sign);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 }

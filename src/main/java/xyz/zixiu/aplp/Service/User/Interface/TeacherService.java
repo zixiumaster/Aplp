@@ -11,6 +11,8 @@ public interface TeacherService {
 
     public TeacherBean login(SignBean sign);
 
+    public boolean updateperson(SignBean sign);
 
+    public boolean updatepassword(SignBean sign);
 
 }

@@ -15,6 +15,11 @@
 
     <!-- 扫描Controller所在的包 -->
     <context:component-scan base-package="xyz.zixiu.aplp.Controller" />
+    <!--注入相关bean-->
+    <!--注入相关bean-->
+
+    <context:component-scan base-package="xyz.apps"/>
+
 
     <!-- 注解驱动 -->
     <mvc:annotation-driven></mvc:annotation-driven>

@@ -10,5 +10,8 @@ public interface StudentMapper {
 
     public StudentBean selectStudentBySign(SignBean sign);
 
+    public void updateStudentbyUserBean(SignBean sign);
+
+    public void updateStudentPasswordbyUserBean(SignBean sign);
 
 }

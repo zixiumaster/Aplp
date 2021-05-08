@@ -17,4 +17,13 @@
     <select id="selectStudentBySign" resultType="xyz.zixiu.aplp.Bean.User.StudentBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
         select * from user_student where ${basis}=#{id} and password=#{password}
     </select>
+
+    <update id="updateStudentbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        update user_student set id=#{id},name=#{name},phone=#{phone},email=#{email} where ${basis}=#{attachment}
+    </update>
+
+    <update id="updateStudentPasswordbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
+        update user_student set password=#{password} where ${basis}=#{id}
+    </update>
+
 </mapper>

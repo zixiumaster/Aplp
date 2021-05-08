@@ -9,5 +9,8 @@ public interface StudentService {
 
     public StudentBean login(SignBean sign);
 
+    public boolean updateperson(SignBean sign);
+
+    public boolean updatepassword(SignBean sign);
 
 }

@@ -34,6 +34,7 @@ function toLogin() {
 		}
 
 		var urlPath=urlRoot+"Sign/toLogin.action";
+
 		$.ajax({
 			url: urlPath,
 			contentType: "application/json",
@@ -41,11 +42,12 @@ function toLogin() {
 			dataType: "JSON",
 			type: "POST",
 			success: function(data) {
+				console.log("获取到json，开始检查");
 				if(data!=null){
-					alert("登录成功，正在跳转");
-
 					//登录成功后，把用户信息写入到cookie里面
-					setCookieUser(type,idType,idText);
+					console.log("获取到json，非空");
+					setCookieUser(data);
+					console.log("写入cookie，开始跳转");
 					goMajor();
 				}else{
 					alert("登陆失败");

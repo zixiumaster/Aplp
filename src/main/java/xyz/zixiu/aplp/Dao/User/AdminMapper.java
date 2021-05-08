@@ -9,4 +9,8 @@ public interface AdminMapper {
 
     public AdminBean selectAdminBySign(SignBean sign);
 
+    public void updateAdminbyUserBean(SignBean sign);
+
+    public void updateAdminPasswordbyUserBean(SignBean sign);
+
 }
