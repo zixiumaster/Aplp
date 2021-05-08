@@ -1,32 +1,21 @@
 package xyz.zixiu.aplp.Controller;
 
-import com.alibaba.nacos.api.exception.NacosException;
-import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
-import xyz.apps.NacosDiscovery;
-import xyz.zixiu.aplp.Bean.User.AdminBean;
-import xyz.zixiu.aplp.Bean.User.SignBean;
-import xyz.zixiu.aplp.Bean.User.StudentBean;
-import xyz.zixiu.aplp.Bean.User.TeacherBean;
-import xyz.zixiu.aplp.Service.User.UserService;
+import xyz.zixiu.aplp.Bean.UserBean.ClientBean;
+import xyz.zixiu.aplp.Bean.UserBean.SignBean;
+import xyz.zixiu.aplp.Entity.SignEntity;
+import xyz.zixiu.aplp.Service.User.Interface.UserInformationService;
 
 @Controller
 @RequestMapping("/Sign")
 public class Sign {
 
-    UserService us=new UserService();
-
-
-
-    @RequestMapping("/godoc")
-    public String godoc(){
-        System.out.println("\n\ngoRegister\n\n");
-        return "Html/Main/ww.doc";
-    }
+    private UserInformationService userInformationService;
 
     @RequestMapping("/goLogin")
     public String goLogin(){
@@ -62,20 +51,17 @@ public class Sign {
     @RequestMapping("/toRegister")
     public @ResponseBody
     String toRegister(@RequestBody SignBean user) {
+        SignEntity signEntity = new SignEntity(user.getBasis(), user.getId(), user.getPassword());
+        String role = user.getRole();
+
         System.out.println(user.toString());
+        System.out.println(signEntity.toString());
+        System.out.println(role);
 
         try {
-            if (user.getRole() == null || user.getId() == null ||  user.getPassword() == null) {
-                return "no";
-            } else if (user.getRole().equals("Admin")) {
-                return "no";
-            } else if (user.getRole().equals("Teacher")) {
-                us.teacherService.register(user);
+            if (userInformationService.signUpUser(user)){
                 return "yes";
-            } else if (user.getRole().equals("Student")) {
-                us.studentService.register(user);
-                return "yes";
-            } else {
+            }else{
                 return "no";
             }
         } catch (Exception e) {
@@ -86,43 +72,13 @@ public class Sign {
 
     @RequestMapping("/toLogin")
     public @ResponseBody
-    SignBean toLogin(@RequestBody SignBean user) {
-
-        System.out.println(user.toString());
-
-        try {
-            if (user.getRole() == null) {
-                return null;
-            } else if (user.getRole().equals("Admin")) {
-                 AdminBean bean = us.adminService.login(user);
-                 if( bean!=null ){
-                     user.setAdminBean(bean);
-                     return user;
-                 }else{
-                     return null;
-                 }
-            } else if (user.getRole().equals("Teacher")) {
-                TeacherBean bean = us.teacherService.login(user);
-                if( bean!=null ){
-                    user.setTeacherBean(bean);
-                    return user;
-                }else{
-                    return null;
-                }
-            } else if (user.getRole().equals("Student")) {
-                StudentBean bean = us.studentService.login(user);
-                if( bean!=null ){
-                    user.setStudentBean(bean);
-                    return user;
-                }else{
-                    return null;
-                }
-            } else {
-                return null;
-            }
-        } catch (Exception e) {
-            return null;
-        }
+    ClientBean toLogin(@RequestBody SignBean user) {
+        return userInformationService.signIn(user);
     }
 
+    public Sign(){
+        System.out.println("public Sign()");
+        ApplicationContext ac_User = (ApplicationContext) new ClassPathXmlApplicationContext("applicationContext-User.xml");
+        userInformationService = (UserInformationService)ac_User.getBean("UserInformationService");
+    }
 }

@@ -10,6 +10,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/GetHtmlPageMain")
 public class GetHtmlPageMain {
+
     @RequestMapping("/getHtmlPageMainMenu")
     public String getHtmlPageMainMenu(@RequestBody Map<String,String> RB){
        // System.out.println("getHtmlPageMainMenu(@RequestParam(\"role\") String role)");

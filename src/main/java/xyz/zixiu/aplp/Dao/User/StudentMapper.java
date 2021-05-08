@@ -1,17 +1,17 @@
 package xyz.zixiu.aplp.Dao.User;
 
-import xyz.zixiu.aplp.Bean.User.SignBean;
-import xyz.zixiu.aplp.Bean.User.StudentBean;
+import xyz.zixiu.aplp.Entity.ReadStudentEntity;
+import xyz.zixiu.aplp.Entity.SignEntity;
+import xyz.zixiu.aplp.Entity.UpdateStudentEntity;
 
 public interface StudentMapper {
 
+    public void signUpStudent(SignEntity signEntity);
 
-    public void saveStudent(SignBean bean);
+    public ReadStudentEntity signInStudent(SignEntity signEntity);
 
-    public StudentBean selectStudentBySign(SignBean sign);
+    public void updateStudent(UpdateStudentEntity updateStudentEntity);
 
-    public void updateStudentbyUserBean(SignBean sign);
-
-    public void updateStudentPasswordbyUserBean(SignBean sign);
+    public void deleteStudent(SignEntity signEntity);
 
 }

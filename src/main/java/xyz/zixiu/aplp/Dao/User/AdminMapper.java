@@ -1,16 +1,17 @@
 package xyz.zixiu.aplp.Dao.User;
 
-import xyz.zixiu.aplp.Bean.User.AdminBean;
-import xyz.zixiu.aplp.Bean.User.SignBean;
+import xyz.zixiu.aplp.Entity.ReadAdministratorEntity;
+import xyz.zixiu.aplp.Entity.SignEntity;
+import xyz.zixiu.aplp.Entity.UpdateAdministratorEntity;
 
 public interface AdminMapper {
 
-    public void saveAdmin(SignBean bean);
+    public void signUpAdministrator(SignEntity signEntity);
 
-    public AdminBean selectAdminBySign(SignBean sign);
+    public ReadAdministratorEntity signInAdministrator(SignEntity signEntity);
 
-    public void updateAdminbyUserBean(SignBean sign);
+    public void updateAdministrator(UpdateAdministratorEntity updateAdministratorEntity);
 
-    public void updateAdminPasswordbyUserBean(SignBean sign);
+    public void deleteAdministrator(SignEntity signEntity);
 
 }

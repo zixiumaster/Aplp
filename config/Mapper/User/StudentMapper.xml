@@ -6,24 +6,37 @@
 <mapper namespace="xyz.zixiu.aplp.Dao.User.StudentMapper">
 
     <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
-    <insert id="saveStudent" parameterType="xyz.zixiu.aplp.Bean.User.SignBean" >
-        insert INTO user_student(
-            id,name,phone,email,password
-        )values(
-            #{id},#{name},#{phone},#{email},#{password}
-        )
+    <insert id="signUpStudent" parameterType="xyz.zixiu.aplp.Entity.SignEntity">
+        insert into user_student(${basis}, password)
+        values (#{id}, #{password})
     </insert>
 
-    <select id="selectStudentBySign" resultType="xyz.zixiu.aplp.Bean.User.StudentBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        select * from user_student where ${basis}=#{id} and password=#{password}
+    <select id="signInStudent" parameterType="xyz.zixiu.aplp.Entity.SignEntity"
+            resultType="xyz.zixiu.aplp.Entity.ReadStudentEntity">
+        select *
+        from user_student
+        where ${basis} = #{id}
+          and password = #{password}
     </select>
 
-    <update id="updateStudentbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        update user_student set id=#{id},name=#{name},phone=#{phone},email=#{email} where ${basis}=#{attachment}
+    <update id="updateStudent" parameterType="xyz.zixiu.aplp.Entity.UpdateStudentEntity">
+        update user_student
+        set id=#{id},
+            name=#{name},
+            phone=#{phone},
+            email=#{email},
+            password=#{password},
+            department=#{department},
+            classe=#{classe}
+        where ${signBasis} = #{signId}
+          and password = #{signPassword}
     </update>
 
-    <update id="updateStudentPasswordbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        update user_student set password=#{password} where ${basis}=#{id}
-    </update>
+    <delete id="deleteStudent" parameterType="xyz.zixiu.aplp.Entity.SignEntity">
+        delete
+        from user_student
+        where ${basis} = #{id}
+          and password = #{password}
+    </delete>
 
 </mapper>

@@ -10,6 +10,6 @@
     <!--    注解解析器   -->
         <context:annotation-config></context:annotation-config>
 
-        <bean id="StudentService" class="xyz.zixiu.aplp.Service.User.Impl.StudentServiceImpl" />
+        <bean id="UserInformationService" class="xyz.zixiu.aplp.Service.User.Impl.UserInformationServiceImpl" />
 
 </beans>

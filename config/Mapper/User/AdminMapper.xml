@@ -6,24 +6,36 @@
 <mapper namespace="xyz.zixiu.aplp.Dao.User.AdminMapper">
 
     <!-- id要与接口类内的方法名对应，parameterType要与方法的参数类型对应 -->
-    <insert id="saveAdmin" parameterType="xyz.zixiu.aplp.Bean.User.SignBean" >
-        insert INTO user_admin(
-            id,name,phone,email,password
-        )values(
-            #{id},#{name},#{phone},#{email},#{password}
-        )
+
+    <insert id="signUpAdministrator" parameterType="xyz.zixiu.aplp.Entity.SignEntity">
+        insert INTO user_administrator(${basis}, password)
+        values (#{id}, #{password})
     </insert>
 
-    <select id="selectAdminBySign" resultType="xyz.zixiu.aplp.Bean.User.AdminBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        select * from user_admin where ${basis}=#{id} and password=#{password}
+    <select id="signInAdministrator" parameterType="xyz.zixiu.aplp.Entity.SignEntity"
+            resultType="xyz.zixiu.aplp.Entity.ReadAdministratorEntity">
+        select *
+        from user_administrator
+        where ${basis} = #{id}
+          and password = #{password}
     </select>
 
-    <update id="updateAdminbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        update user_admin set id=#{id},name=#{name},phone=#{phone},email=#{email} where ${basis}=#{attachment}
+
+    <update id="updateAdministrator" parameterType="xyz.zixiu.aplp.Entity.UpdateAdministratorEntity">
+        update user_administrator
+        set id=#{id},
+            name=#{name},
+            phone=#{phone},
+            email=#{email},
+            password=#{password}
+        where ${signBasis} = #{signId}
+          and password = #{signPassword}
     </update>
 
-    <update id="updateAdminPasswordbyUserBean" parameterType="xyz.zixiu.aplp.Bean.User.SignBean">
-        update user_admin set password=#{password} where ${basis}=#{id}
-    </update>
-
+    <delete id="deleteAdministrator" parameterType="xyz.zixiu.aplp.Entity.SignEntity">
+        delete
+        from user_administrator
+        where ${basis} = #{id}
+          and password = #{password}
+    </delete>
 </mapper>

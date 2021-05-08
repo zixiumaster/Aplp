@@ -24,8 +24,6 @@
         <context:component-scan base-package="xyz.zixiu.aplp.Dao.DB" />
         <context:component-scan base-package="xyz.zixiu.aplp.Service.User.Impl" />
         <context:component-scan base-package="xyz.zixiu.aplp.Service.User.Interface" />
-        <context:component-scan base-package="xyz.zixiu.aplp.test" />
-        <context:component-scan base-package="xyz.zixiu.aplp.tool" />
 
 
         <!-- 开启Spring的事务管理 -->
