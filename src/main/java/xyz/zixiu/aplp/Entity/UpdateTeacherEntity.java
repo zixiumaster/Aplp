@@ -1,5 +1,7 @@
 package xyz.zixiu.aplp.Entity;
 
+import xyz.zixiu.aplp.Bean.UserBean.FromPersonBean;
+
 public class UpdateTeacherEntity extends ReadTeacherEntity {
 
     private String signBasis;
@@ -51,4 +53,27 @@ public class UpdateTeacherEntity extends ReadTeacherEntity {
                 super.toString()+
                 '}';
     }
+
+    public void setFromPersonBean(FromPersonBean from){
+        this.signBasis=from.getSignbasis();
+        this.signId= from.getSignId();
+        this.signPassword= from.getSignPassword();
+        super.setId(from.getId());
+        super.setName(from.getName());
+        super.setEmail(from.getEmail());
+        super.setPhone(from.getPhone());
+        super.setPassword(from.getPassword());
+
+    }
+
+    public void setUpdateTeacherEntity(ReadTeacherEntity read) {
+        super.setId(read.getId());
+        super.setName(read.getName());
+        super.setEmail(read.getEmail());
+        super.setPhone(read.getPhone());
+        super.setPassword(read.getPassword());
+        super.setDepartment(read.getDepartment());
+    }
+
+
 }

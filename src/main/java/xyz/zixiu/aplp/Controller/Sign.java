@@ -53,26 +53,26 @@ public class Sign {
     String toRegister(@RequestBody SignBean user) {
         SignEntity signEntity = new SignEntity(user.getBasis(), user.getId(), user.getPassword());
         String role = user.getRole();
-
         System.out.println(user.toString());
         System.out.println(signEntity.toString());
         System.out.println(role);
 
-        try {
+//        try {
             if (userInformationService.signUpUser(user)){
                 return "yes";
             }else{
                 return "no";
             }
-        } catch (Exception e) {
-            System.err.println(e);
-            return "no";
-        }
+//        } catch (Exception e) {
+//            System.err.println(e);
+//            return "no";
+//        }
     }
 
     @RequestMapping("/toLogin")
     public @ResponseBody
     ClientBean toLogin(@RequestBody SignBean user) {
+        System.out.println(user.toString());
         return userInformationService.signIn(user);
     }
 

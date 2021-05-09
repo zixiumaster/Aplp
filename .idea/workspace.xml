@@ -10,73 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13e2bc6f-52cf-4ea9-a45e-67d72fff78eb" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/ClientBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/SignBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/ReadAdministratorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/ReadStudentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/SignEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateAdministratorEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateStudentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateTeacherEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/UserInformationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/UserInformationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/FromPersonBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/PersonManager/DepartmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/src/main/java/xyz/apps/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/RPC_01/HttpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/src/main/java/xyz/apps/LoadBalancer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/src/main/java/xyz/apps/NacosDiscovery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/src/main/java/xyz/apps/NetworkUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/target/classes/xyz/apps/HttpUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/target/classes/xyz/apps/LoadBalancer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/target/classes/xyz/apps/NacosDiscovery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nacos/target/classes/xyz/apps/NetworkUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL/CreateUserTable.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/CreateUserTable.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/ApplicationContext/ac-AnnotationUser.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/ApplicationContext/ac-AnnotationUser.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/ApplicationContext/ac-Transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/ApplicationContext/ac-Transaction.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Mapper/User/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/Mapper/User/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Mapper/User/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/Mapper/User/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/Mapper/User/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/Mapper/User/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/User/AdminBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/User/SignBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/User/StudentBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/User/TeacherBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/User/UserBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/ReadTeacherEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/GetHeml/GetHtmlPageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/GetHeml/GetHtmlPageMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Major.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/TeacherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/AdminServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/StudentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/TeacherServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/AdminService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/TeacherService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GetReady/GetReadyServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetReady/GetReadyServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/POIUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/pdf2html/PDF2Image.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/poi2html/Excel2Html.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/poi2html/POI2Html.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/poi2html/PPT2Image.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/poi2html/Word2Html.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/xlsx/AbstractXssfExcelConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/xlsx/AbstractXssfExcelUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/xlsx/XssfDataFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/xlsx/XssfExcelToHtmlConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/tfd/xlsx/XssfExcelToHtmlUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/PPTtoImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/PoiExcelToHtml.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/PoiWordToHtml.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/mb_test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/mb_test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateAdministratorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateAdministratorEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateStudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateStudentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateTeacherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateTeacherEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/UserInformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/UserInformationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/UserInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/UserInformationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjaxFrom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjaxFrom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageCookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageCookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Sign/Sign_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Sign/Sign_01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/From/FormPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/From/FormPerson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Student.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Student.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Teacher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/ww.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Main/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Main/Index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +86,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Ware/Desktop/Aplp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -349,7 +308,9 @@
       <workItem from="1620291205891" duration="2609000" />
       <workItem from="1620442095672" duration="13994000" />
       <workItem from="1620482590549" duration="12675000" />
-      <workItem from="1620495658210" duration="1223000" />
+      <workItem from="1620495658210" duration="1713000" />
+      <workItem from="1620497436401" duration="1310000" />
+      <workItem from="1620520315878" duration="20037000" />
     </task>
     <servers />
   </component>

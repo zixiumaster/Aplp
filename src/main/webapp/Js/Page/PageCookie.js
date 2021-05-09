@@ -1,32 +1,51 @@
-function getCookiePage(){
-   return  getCookie("page");
-}
+Page.Cookie = (function() {
+	var objectifier = function(splits, create, context) {
+		var result = context || window;
+		for (var i = 0, s; result && (s = splits[i]); i++) {
+			result = (s in result ? result[s] : (create ? result[s] = {} : undefined));
+		}
+		return result;
+	};
+	return {
+		//属性 ---------------------------------------------------------------------------
 
-function setCookiePage(){
-    var Page={
-        'lastrefreshtime':nowTime()
-    }
-    setCookie('page',Page);
-}
+		//属性 ---------------------------------------------------------------------------
+		//方法 ---------------------------------------------------------------------------
 
+		//写入"pagetime"对象
+		setCookiePageTime: function() {
+			var pagetime = {
+				'lastrefreshtime': Page.Value.nowTime()
+			}
+			Page.Cookie.setCookie('pagetime', pagetime);
+		},
 
-function setCookieUser(data){
-    console.log("获取到json，开始写入，$setCookieUser()");
-    setCookie('user',data);
+		//读取"pagetime"对象
+		getCookiePageTime: function() {
+			return Page.Cookie.getCookie("pagetime");
+		},
 
-}
+		//写入"user"对象
+		setCookieUser: function(data) {
+			Page.Cookie.setCookie('user', data);
+		},
 
+		//获取"user"对象
+		getCookieUser: function() {
+			return Page.Cookie.getCookie('user');
+		},
 
-function getCookieUser(){
-    return getCookie('user');
-}
+		//读cookie
+		getCookie: function(k) {
+			return JSON.parse($.cookie(k));
+		},
 
-//写cookie
-function setCookie(k,v){
-    $.cookie(k, JSON.stringify(v));
-}
+		//写cookie
+		setCookie: function(k, v) {
+			$.cookie(k, JSON.stringify(v));
+		}
 
-//读cookie
-function getCookie(k){
-    return  JSON.parse($.cookie(k));
-}
+		//方法 ---------------------------------------------------------------------------
+	};
+
+})();

@@ -18,12 +18,8 @@ function toLogin() {
 		function getSign() {
 
 			//判断ID类型
-			if (checkEmail(idText)) {
-				idType = "email";
-			} else if (checkMobile(idText)) {
-				idType = "phone";
-			}
-
+			idType =Page.FromTool.checkId(idText);
+			
 			var ret = new Object();
 
 			ret.role=type;
@@ -33,10 +29,8 @@ function toLogin() {
 			return JSON.stringify(ret);
 		}
 
-		var urlPath=urlRoot+"Sign/toLogin.action";
-
 		$.ajax({
-			url: urlPath,
+			url: Page.Redirect.toLogin,
 			contentType: "application/json",
 			data: getSign(),
 			dataType: "JSON",
@@ -46,12 +40,14 @@ function toLogin() {
 				if(data!=null){
 					//登录成功后，把用户信息写入到cookie里面
 					console.log("获取到json，非空");
-					setCookieUser(data);
+					Page.Cookie.setCookieUser(data);
+					
 					console.log("写入cookie，开始跳转");
-					goMajor();
+					Page.Cookie.setCookiePageTime();
+					Page.Redirect.goMajor();
 				}else{
 					alert("登陆失败");
-					goLogin();
+					Page.Redirect.goLogin();
 				}
 			},
 			error: function(XMLResponse) {
@@ -76,11 +72,7 @@ function toRegister() {
 		//检查确认密码
 	}else if (checkPassword()) {
 		function getSign() {
-			if (checkEmail(idText)) {
-				idType = "email";
-			} else if (checkMobile(idText)) {
-				idType = "phone";
-			}
+			idType =Page.FromTool.checkId(idText);
 
 			var ret = new Object();
 			ret.role=type;
@@ -89,9 +81,8 @@ function toRegister() {
 			ret.password = pwdText;
 			return JSON.stringify(ret);
 		}
-		var urlPath=urlRoot+"Sign/toRegister.action";
 		$.ajax({
-			url:urlPath,
+			url:Page.Redirect.toRegister,
 			contentType: "application/json",
 			data: getSign(),
 			dataType: "text",
@@ -114,7 +105,7 @@ function toRegister() {
 
 //跳转到登录界面
 function goLogin() {
-	var urlPath=urlRoot+"Sign/goLogin.action";
+	var urlPath=Page.Value.urlRoot+"Sign/goLogin.action";
 	$.ajax({
 		url: urlPath,
 		contentType: "text",
@@ -136,7 +127,7 @@ function goLogin() {
 
 //跳转到注册页面
 function goRegister() {
-	var urlPath=urlRoot+"Sign/goRegister.action";
+	var urlPath=Page.Value.urlRoot+"Sign/goRegister.action";
 	$.ajax({
 		url: urlPath,
 		contentType: "text",
@@ -153,7 +144,6 @@ function goRegister() {
 		}
 	});
 }
-
 
 //检查确认密码
 function checkPassword() {
@@ -180,29 +170,6 @@ function checkPassword() {
 		return false;
 	}
 
-}
-
-
-//检测邮箱格式
-//调用格式：checkEmail("contact@cnblogs.com");
-function checkEmail(str) {
-	var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-	if (re.test(str)) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-//检测手机号码格式
-//调用格式 checkMobile('13800138000');
-function checkMobile(str) {
-	var re = /^1\d{10}$/
-	if (re.test(str)) {
-		return true;
-	} else {
-		return false;
-	}
 }
 
 //检测验证码

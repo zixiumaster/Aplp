@@ -1,5 +1,10 @@
 package xyz.zixiu.aplp.Entity;
 
+import xyz.zixiu.aplp.Bean.UserBean.FromPersonBean;
+
+/**
+ * 继承了父类的 id;name;phone;email;password;
+ */
 public class UpdateAdministratorEntity extends ReadAdministratorEntity {
 
     private String signBasis;
@@ -52,4 +57,25 @@ public class UpdateAdministratorEntity extends ReadAdministratorEntity {
                 super.toString()+
                 '}';
     }
+
+    public void setUpdateAdministratorEntity(ReadAdministratorEntity read) {
+        super.setId(read.getId());
+        super.setName(read.getName());
+        super.setEmail(read.getEmail());
+        super.setPhone(read.getPhone());
+        super.setPassword(read.getPassword());
+    }
+
+    public void setFromPersonBean(FromPersonBean from){
+        this.signBasis=from.getSignbasis();
+        this.signId= from.getSignId();
+        this.signPassword= from.getSignPassword();
+        super.setId(from.getId());
+        super.setName(from.getName());
+        super.setEmail(from.getEmail());
+        super.setPhone(from.getPhone());
+        super.setPassword(from.getPassword());
+
+    }
+
 }
