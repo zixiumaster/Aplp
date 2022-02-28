@@ -10,29 +10,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13e2bc6f-52cf-4ea9-a45e-67d72fff78eb" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/FromPersonBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/PersonManager/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/Curriculum/selCurriculumSign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/FromSchoolBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/GetHeml/GetHtmlCurriculum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/Curriculum/Curriculum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/Curriculum/CurriculumListPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/Curriculum/CurriculumPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/Curriculum/Part.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/School/CtrlCurriculumPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/School/DepartmentPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/School/SchoolPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/School/UnitPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Pojo/School/UpdUnitPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/Curriculum/UrlConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/School/StructureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/School/UrlConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/CurriculumFun/CurriculumFun_01.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/FromManageSchool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Curriculum/ManagePartList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Curriculum/curriculumBlockView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Curriculum/partListTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Curriculum/partView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FormPerson/AddAmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromCurriculum/FromManageCurriculum.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromCurriculum/FromManagePart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageClasseAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageClasseDel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageClasseUpd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageDepartmentAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageDepartmentDel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool/FromManageDepartmentUpd.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/883a2501-fe34-4886-b9f3-ea86c5ad3f09.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Mapper/User/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/Mapper/User/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Properties/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/Properties/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config/spring-mvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Major.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/FromPersonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Bean/UserBean/FromPersonBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/GetHeml/GetHtmlPageMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/GetHeml/GetHtmlPageMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign/Major.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/Sign/Sign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Controller/TestBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Dao/User/TeacherMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateAdministratorEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateAdministratorEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateStudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateStudentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateTeacherEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Entity/UpdateTeacherEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/PersonManager/DepartmentService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/UserInformationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Impl/UserInformationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/UserInformationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xyz/zixiu/aplp/Service/User/Interface/UserInformationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Img/User/IconUserAdmin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Img/User/IconUserAdministrator.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjaxFrom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainFun/MainFunAjaxFrom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/Main_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainInclude/Main_01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/Main_02.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainInclude/Main_02.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/common-scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/jquery.nicescroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainInclude/jquery.nicescroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Main/jquery.sparkline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Main/MainInclude/jquery.sparkline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageCookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageCookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageRedirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Page/PageValue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/Js/Sign/Sign_01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Js/Sign/Sign_01.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/From/FormPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/From/FormPerson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/ceshi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/q.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_03.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestHtml/test_05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/From/FormPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FormPerson/FormPerson.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Student.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Student.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Teacher.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/Menu/Menu_01_Teacher.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/ww.doc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Sign/Login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Main/Index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Main/Index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
@@ -50,7 +102,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -80,17 +134,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Ware/Desktop/Aplp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FromManageSchool" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="工件" />
     <property name="project.structure.proportion" value="0.14104372" />
     <property name="project.structure.side.proportion" value="0.48405254" />
@@ -98,22 +154,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Project\Java\Aplp\src\main\java\xyz\zixiu\aplp\Service" />
-      <recent name="D:\Project\Java\Aplp\config\Mapper\UserMapper" />
-      <recent name="D:\Project\Java\Aplp\Nacos\src\main\resources" />
-      <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF" />
-      <recent name="D:\Project\Java\Aplp\AppsRPC\src\main\resources" />
+      <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF\Html\Main\FromManageSchool" />
+      <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF\Html\Main\FormPerson" />
+      <recent name="D:\Project\Java\Aplp\src\main\java\xyz\zixiu\aplp\Pojo\Curriculum" />
+      <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF\Html\Main\FromCurriculum" />
+      <recent name="D:\Project\Java\Aplp\src\main\java\xyz\zixiu\aplp\Pojo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF\Html\Main\FromManageSchool" />
+      <recent name="D:\Project\Java\Aplp\src\main\webapp\Js\Main\MainInclude" />
       <recent name="D:\Project\Java\Aplp\src\main\webapp\WEB-INF\Html\Main" />
       <recent name="D:\Project\Java\Aplp\src\test\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="xyz.zixiu.aplp.Pojo.School" />
+      <recent name="xyz.zixiu.aplp.Controller.Curriculum" />
+      <recent name="xyz.zixiu.aplp.Service.Curriculum" />
       <recent name="xyz.zixiu.aplp.Entity" />
       <recent name="xyz.zixiu" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat 服务器.Tomcat 9">
+  <component name="RunManager" selected="Application.POI2Html">
     <configuration name="POI2Html" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tfd.poi2html.POI2Html" />
       <module name="aplp" />
@@ -123,17 +184,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -273,16 +323,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.POI2Html" />
       <item itemvalue="JUnit.mb_test.test" />
       <item itemvalue="JUnit.PoiWordToHtml" />
       <item itemvalue="JUnit.PoiWordToHtml.test" />
-      <item itemvalue="Tomcat 服务器.Tomcat 9" />
-      <item itemvalue="应用程序.POI2Html" />
+      <item itemvalue="Tomcat Server.Tomcat 9" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.mb_test.test" />
-        <item itemvalue="应用程序.POI2Html" />
         <item itemvalue="JUnit.PoiWordToHtml.test" />
         <item itemvalue="JUnit.PoiWordToHtml" />
       </list>
@@ -310,12 +359,79 @@
       <workItem from="1620482590549" duration="12675000" />
       <workItem from="1620495658210" duration="1713000" />
       <workItem from="1620497436401" duration="1310000" />
-      <workItem from="1620520315878" duration="20037000" />
+      <workItem from="1620520315878" duration="26685000" />
+      <workItem from="1620567632975" duration="1692000" />
+      <workItem from="1620575790264" duration="719000" />
+      <workItem from="1620609475540" duration="5705000" />
+      <workItem from="1620695207482" duration="43532000" />
+      <workItem from="1620746589935" duration="600000" />
+      <workItem from="1620756997055" duration="1016000" />
+      <workItem from="1620782238049" duration="90000" />
+      <workItem from="1620806680783" duration="15566000" />
+      <workItem from="1620825923897" duration="25182000" />
+      <workItem from="1620893303913" duration="3289000" />
+      <workItem from="1620898973946" duration="1087000" />
+      <workItem from="1620901855401" duration="2801000" />
+      <workItem from="1620916888767" duration="7054000" />
+      <workItem from="1620957597207" duration="592000" />
+      <workItem from="1620959611451" duration="27887000" />
+      <workItem from="1620996651100" duration="2397000" />
+      <workItem from="1621009838253" duration="1591000" />
+      <workItem from="1621045359733" duration="85000" />
+      <workItem from="1621047217648" duration="2597000" />
+      <workItem from="1621128511224" duration="32713000" />
+      <workItem from="1621175740581" duration="5602000" />
+      <workItem from="1621185617890" duration="4713000" />
+      <workItem from="1621224631992" duration="4437000" />
+      <workItem from="1621304335363" duration="3544000" />
+      <workItem from="1621314402794" duration="18074000" />
+      <workItem from="1621392353593" duration="25776000" />
+      <workItem from="1621424426451" duration="16251000" />
+      <workItem from="1621473871503" duration="4440000" />
+      <workItem from="1621480353443" duration="528000" />
+      <workItem from="1621486131794" duration="5563000" />
+      <workItem from="1621528465603" duration="2102000" />
+      <workItem from="1621542260855" duration="12441000" />
+      <workItem from="1621669353343" duration="2300000" />
+      <workItem from="1621727429519" duration="1429000" />
+      <workItem from="1621870924439" duration="8000" />
+      <workItem from="1621931498214" duration="120000" />
+      <workItem from="1621997522121" duration="1292000" />
+      <workItem from="1622029825102" duration="8367000" />
+      <workItem from="1622603526912" duration="1988000" />
+      <workItem from="1622618658108" duration="7222000" />
+      <workItem from="1622788873392" duration="3254000" />
+      <workItem from="1622864364664" duration="5086000" />
+      <workItem from="1630397146098" duration="828000" />
+      <workItem from="1630644768656" duration="597000" />
+      <workItem from="1630645570795" duration="377000" />
+      <workItem from="1630865378212" duration="574000" />
+      <workItem from="1631662826591" duration="506000" />
+      <workItem from="1634840474672" duration="1173000" />
+      <workItem from="1634974147191" duration="99000" />
+      <workItem from="1636783324655" duration="214000" />
+      <workItem from="1636883248293" duration="1875000" />
+      <workItem from="1637060742144" duration="1360000" />
+      <workItem from="1637512227932" duration="622000" />
+      <workItem from="1637664462235" duration="2370000" />
+      <workItem from="1637830399159" duration="570000" />
+      <workItem from="1645456343946" duration="732000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Html/Main/FormPerson/FromManageDepartment.html</url>
+          <line>52</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

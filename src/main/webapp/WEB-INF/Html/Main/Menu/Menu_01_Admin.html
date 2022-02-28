@@ -15,7 +15,6 @@
         </li>
     </ul>
     <!-- 菜单子项 -->
-
 </li>
 <!-- 个人资料子菜单 -->
 
@@ -32,13 +31,93 @@
     <!-- 菜单子项 -->
     <ul class="sub" style="display: none;">
         <li>
-            <a style="font-size:1.2em;">管理院系</a>
+            <a onclick="loadRegAdmin();" style="font-size:1.2em;">新增管理员</a>
         </li>
+    </ul>
+    <!-- 菜单子项 -->
+
+<!--    &lt;!&ndash; 菜单子项 &ndash;&gt;-->
+<!--    <ul class="sub" style="display: none;">-->
+<!--        <li>-->
+<!--            <a onclick="goManageDepartment();" style="font-size:1.2em;">管理院系</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    &lt;!&ndash; 菜单子项 &ndash;&gt;-->
+
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
         <li>
-            <a  style="font-size:1.2em;">管理班级</a>
+            <a onclick="goManageDepartmentAdd();" style="font-size:1.2em;">添加院系</a>
         </li>
+    </ul>
+    <!-- 菜单子项 -->
+
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
         <li>
-            <a  style="font-size:1.2em;">管理师生</a>
+            <a onclick="goManageDepartmentUpd();" style="font-size:1.2em;">更新院系</a>
+        </li>
+    </ul>
+    <!-- 菜单子项 -->
+
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
+        <li>
+            <a onclick="goManageDepartmentDel();" style="font-size:1.2em;">删除院系</a>
+        </li>
+    </ul>
+    <!-- 菜单子项 -->
+
+
+
+<!--    &lt;!&ndash; 菜单子项 &ndash;&gt;-->
+<!--    <ul class="sub" style="display: none;">-->
+<!--        <li>-->
+<!--            <a onclick="goManageClasse();" style="font-size:1.2em;">管理班级</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    &lt;!&ndash; 菜单子项 &ndash;&gt;-->
+
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
+        <li>
+            <a onclick="goManageClasseAdd();" style="font-size:1.2em;">添加班级</a>
+        </li>
+    </ul>
+    <!-- 菜单子项 -->
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
+        <li>
+            <a onclick="goManageClasseUpd();" style="font-size:1.2em;">更新班级</a>
+        </li>
+    </ul>
+    <!-- 菜单子项 -->
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
+        <li>
+            <a onclick="goManageClasseDel();" style="font-size:1.2em;">删除班级</a>
+        </li>
+    </ul>
+    <!-- 菜单子项 -->
+
+
+</li>
+<!-- 管理功能子菜单 -->
+
+<!-- 管理功能子菜单 -->
+<li class="sub-menu dcjq-parent-li">
+    <!-- 按钮标题 -->
+    <a href="javascript:;" class="dcjq-parent" style="font-size:1.5em;">
+        <span>
+            课程发布
+        </span>
+    </a>
+    <!-- 按钮标题 -->
+
+    <!-- 菜单子项 -->
+    <ul class="sub" style="display: none;">
+        <li>
+            <a onclick="getFromManageCurriculum();" style="font-size:1.2em;">发布课程</a>
         </li>
     </ul>
     <!-- 菜单子项 -->

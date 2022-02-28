@@ -37,4 +37,11 @@
           and password = #{password}
     </delete>
 
+    <select id="selectTeacherByDepartmentId" parameterType="java.lang.String"
+            resultType="xyz.zixiu.aplp.Entity.ReadTeacherEntity">
+        select id,name
+        from user_teacher
+        where department = #{departmentId}
+    </select>
+
 </mapper>

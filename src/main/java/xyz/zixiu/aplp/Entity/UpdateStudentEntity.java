@@ -1,6 +1,7 @@
 package xyz.zixiu.aplp.Entity;
 
 import xyz.zixiu.aplp.Bean.UserBean.FromPersonBean;
+import xyz.zixiu.aplp.Bean.UserBean.FromSchoolBean;
 
 public class UpdateStudentEntity extends ReadStudentEntity {
 
@@ -62,18 +63,39 @@ public class UpdateStudentEntity extends ReadStudentEntity {
         super.setName(from.getName());
         super.setEmail(from.getEmail());
         super.setPhone(from.getPhone());
-        super.setPassword(from.getPassword());
-
+        //如果表单中的新密码为空，就把验证密码放进去
+        if(from.getPassword()!=null){
+            super.setPassword(from.getPassword());
+        }else{
+            super.setPassword(from.getSignPassword());
+        }
     }
 
-    public void setUpdateStudentEntity(ReadStudentEntity read) {
-        super.setId(read.getId());
-        super.setName(read.getName());
-        super.setEmail(read.getEmail());
-        super.setPhone(read.getPhone());
-        super.setPassword(read.getPassword());
-        super.setDepartment(read.getDepartment());
-        super.setClasse(read.getClasse());
+    public void setFromSchoolBean(FromSchoolBean bean){
+        this.signBasis=bean.getSignbasis();
+        this.signId=bean.getSignId();
+        this.signPassword=bean.getSignPassword();
+
+        super.setDepartment(bean.getDepartment());
+        super.setClasse(bean.getClasse());
+    }
+
+    public void setUpdateStudentEntity(ReadStudentEntity read)  throws Exception {
+        if(read.getId()!=null){
+            super.setId(read.getId());
+        }if (read.getName()!=null){
+            super.setName(read.getName());
+        }if (read.getEmail()!=null){
+            super.setEmail(read.getEmail());
+        }if (read.getPhone()!=null){
+            super.setPhone(read.getPhone());
+        }if (read.getPassword()!=null){
+            super.setPassword(read.getPassword());
+        } if (read.getDepartment()!=null){
+            super.setDepartment(read.getDepartment());
+        }if(read.getClasse()!=null){
+            super.setClasse(read.getClasse());
+        }
     }
 
 }

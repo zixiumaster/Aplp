@@ -58,12 +58,18 @@ public class UpdateAdministratorEntity extends ReadAdministratorEntity {
                 '}';
     }
 
-    public void setUpdateAdministratorEntity(ReadAdministratorEntity read) {
-        super.setId(read.getId());
-        super.setName(read.getName());
-        super.setEmail(read.getEmail());
-        super.setPhone(read.getPhone());
-        super.setPassword(read.getPassword());
+    public void setUpdateAdministratorEntity(ReadAdministratorEntity read) throws Exception {
+        if(read.getId()!=null){
+            super.setId(read.getId());
+        }if (read.getName()!=null){
+            super.setName(read.getName());
+        }if (read.getEmail()!=null){
+            super.setEmail(read.getEmail());
+        }if (read.getPhone()!=null){
+            super.setPhone(read.getPhone());
+        }if (read.getPassword()!=null){
+            super.setPassword(read.getPassword());
+        }
     }
 
     public void setFromPersonBean(FromPersonBean from){
@@ -74,8 +80,13 @@ public class UpdateAdministratorEntity extends ReadAdministratorEntity {
         super.setName(from.getName());
         super.setEmail(from.getEmail());
         super.setPhone(from.getPhone());
-        super.setPassword(from.getPassword());
 
+        //如果表单中的新密码为空，就把验证密码放进去
+        if(from.getPassword()!=null){
+            super.setPassword(from.getPassword());
+        }else{
+            super.setPassword(from.getSignPassword());
+        }
     }
 
 }

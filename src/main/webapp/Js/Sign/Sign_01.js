@@ -26,6 +26,7 @@ function toLogin() {
 			ret.basis = idType;
 			ret.id = idText;
 			ret.password = pwdText;
+			//Page.Cookie.setCookieUser(ret);
 			return JSON.stringify(ret);
 		}
 
@@ -40,10 +41,11 @@ function toLogin() {
 				if(data!=null){
 					//登录成功后，把用户信息写入到cookie里面
 					console.log("获取到json，非空");
+					console.log(data);
 					Page.Cookie.setCookieUser(data);
-					
-					console.log("写入cookie，开始跳转");
 					Page.Cookie.setCookiePageTime();
+					console.log(Page.Cookie.getCookieUser());
+
 					Page.Redirect.goMajor();
 				}else{
 					alert("登陆失败");
@@ -51,9 +53,11 @@ function toLogin() {
 				}
 			},
 			error: function(XMLResponse) {
+				alert("登陆失败");
 				console.log(XMLResponse.responseText);
 			}
 		});
+
 	}
 
 }
@@ -120,6 +124,7 @@ function goLogin() {
 		error: function(XMLResponse) {
 			console.log(XMLResponse.responseText);
 			alert("与服务器连接失败");
+			Page.Redirect.goWelcome();
 		}
 	});
 
@@ -198,6 +203,7 @@ function checkVerificationCode() {
 		return false;
 	}
 }
+
 //验证码
 function verificationCodeChange() {
 	code = $("#code");

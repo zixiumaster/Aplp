@@ -15,7 +15,6 @@ function loadCookieUser() {
 	//修改页面的头像
 	var UserPhotoimgpath = "<img alt=\"avatar\" src=\"Img/User/IconUser" + user.role + ".png\">";
 	UserPhoto.innerHTML = UserPhotoimgpath;
-
 }
 
 //载入左侧工具栏
@@ -46,7 +45,7 @@ function loadingRefresh() {
 
 	var lastrefreshtime = Page.Cookie.getCookiePageTime().lastrefreshtime;
 		
-	if (Page.Value.nowTime() - lastrefreshtime > 1) {
+	if (Page.Value.nowTime() - lastrefreshtime > 1 && Page.Value.nowTime() - lastrefreshtime < 5) {
 		Page.Cookie.setCookiePageTime();
 		location.reload();
 	}
@@ -59,6 +58,65 @@ function getValue(jsonObj, key) {
 		if (item == key) {
 			return jsonObj[item];
 		}
+	}
+
+}
+
+//载入“注册管理员”界面模块
+function loadRegAdmin(){
+	$.ajax({
+		url: Page.Redirect.getHtmlAddAdmin,
+		dataType: "html",
+		type: "post",
+		success: function (data) {
+			var Html = document.getElementById("mainblock");
+			Html.innerHTML = data;
+		},
+		error: function (XMLResponse) {
+			console.log(XMLResponse.responseText);
+			alert("与服务器连接失败");
+		}
+	});
+}
+
+//提交注册管理员
+function toAddAmin(){
+	var role="Administrator";
+	var newID = document.getElementById("addId").value;
+	var addPwd = document.getElementById("addPassword").value;
+	var addCheckPwd = document.getElementById("addCheckpassword").value;
+	var type=Page.FromTool.checkId(newID);
+
+	var sign={
+		"role":role,
+		"basis":type,
+		"id":newID,
+		"password":addPwd
+	}
+
+	if(newID=="" || newID==null){
+		alert("ID不可为空");
+
+	}else if(Page.FromTool.checkPassword(addPwd,addCheckPwd)){
+		$.ajax({
+			url:Page.Redirect.signUpAdministrator,
+			contentType: "application/json",
+			data: JSON.stringify(sign),
+			dataType: "text",
+			type: "POST",
+			success: function(data) {
+				if(data=="yes"){
+					alert("注册成功，将跳转到登陆页面");
+				}else{
+					alert("注册失败，请检查注册信息，有可能是ID/手机号/邮箱重复注册等原因");
+				}
+			},
+			error: function(XMLResponse) {
+				console.log(XMLResponse.responseText);
+			}
+		});
+	}else{
+		alert("密码不合规");
 	}
 
 }

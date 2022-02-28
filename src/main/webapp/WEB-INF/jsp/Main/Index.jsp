@@ -22,11 +22,13 @@
 		<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 		<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-		<script class="include" type="text/javascript" src="Js/Main/jquery.nicescroll.js"></script>
-		<script class="include" type="text/javascript" src="Js/Main/jquery.sparkline.js"></script>
+
+		<script class="include" type="text/javascript" src="Js/Main/MainInclude/jquery.nicescroll.js"></script>
+		<script class="include" type="text/javascript" src="Js/Main/MainInclude/jquery.sparkline.js"></script>
+
 		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
 
-		<script class="include" type="text/javascript" src="Js/Main/Main_01.js"></script>
+		<script class="include" type="text/javascript" src="Js/Main/MainInclude/Main_01.js"></script>
 		<link rel="stylesheet" type="text/css" href="Css/Main/Main_01.css" />
 		<link rel="stylesheet" type="text/css" href="Css/Main/Main_02.css" />
 
@@ -35,9 +37,13 @@
 		<script type="text/javascript" src="Js/Page/PageFromTool.js"></script>
 		<script type="text/javascript" src="Js/Page/PageRedirect.js"></script>
 		<script type="text/javascript" src="Js/Page/PageCookie.js"></script>
-
 		<script class="include" type="text/javascript" src="Js/Main/MainFun/MainFunAjax.js"></script>
 		<script class="include" type="text/javascript" src="Js/Main/MainFun/MainFunAjaxFrom.js"></script>
+		<script class="include" type="text/javascript" src="Js/Main/MainFun/FromManageSchool.js"></script>
+		<script class="include" type="text/javascript" src="Js/Main/CurriculumFun/CurriculumFun_01.js"></script>
+
+
+
 	</head>
 	<body>
 
@@ -65,135 +71,136 @@
 				</a>
 				<!-- LOGO -->
 
-				<!-- 导航栏菜单 -->
-				<div class="nav notify-row" id="top_menu">
-					<ul class="nav top-menu">
 
-						<!-- 进度框 -->
-						<li class="dropdown">
+<%--				<!-- 导航栏菜单 -->--%>
+<%--				<div class="nav notify-row" id="top_menu">--%>
+<%--					<ul class="nav top-menu">--%>
 
-							<!-- Icon和上角标 -->
-							<a data-toggle="dropdown" class="dropdown-toggle">
-								<i class="fa fa-tasks">
-									<div
-										style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -170px -310px ;-webkit-transform:rotate(90deg);zoom: 0.7;">
-									</div>
-								</i>
-								<span class="badge bg-theme">
-									1
-								</span>
-							</a>
-							<!-- Icon和上角标 -->
+<%--						<!-- 进度框 -->--%>
+<%--						<li class="dropdown">--%>
 
-							<!-- 进度条主栏目 -->
-							<ul class="dropdown-menu extended tasks-bar">
-								<!-- 栏目标题 -->
-								<li>
-									<p class="green">
-										你有 1 条任务进度
-									</p>
-								</li>
-								<!-- 栏目标题 -->
+<%--							<!-- Icon和上角标 -->--%>
+<%--							<a data-toggle="dropdown" class="dropdown-toggle">--%>
+<%--								<i class="fa fa-tasks">--%>
+<%--									<div--%>
+<%--										style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -170px -310px ;-webkit-transform:rotate(90deg);zoom: 0.7;">--%>
+<%--									</div>--%>
+<%--								</i>--%>
+<%--								<span class="badge bg-theme">--%>
+<%--									1--%>
+<%--								</span>--%>
+<%--							</a>--%>
+<%--							<!-- Icon和上角标 -->--%>
 
-								<!-- 进度条信息框 -->
-								<li>
-									<a>
-										<!-- 文字说明 -->
-										<div class="task-info">
-											<div class="desc">title</div>
-											<div class="percent">50%</div>
-										</div>
-										<!-- 文字说明 -->
+<%--							<!-- 进度条主栏目 -->--%>
+<%--							<ul class="dropdown-menu extended tasks-bar">--%>
+<%--								<!-- 栏目标题 -->--%>
+<%--								<li>--%>
+<%--									<p class="green">--%>
+<%--										你有 1 条任务进度--%>
+<%--									</p>--%>
+<%--								</li>--%>
+<%--								<!-- 栏目标题 -->--%>
 
-										<!-- 进度条图样 -->
-										<div class="progress progress-striped">
-											<div class="progress-bar progress-bar-success" style="width: 50%"></div>
-										</div>
-										<!-- 进度条图样 -->
+<%--								<!-- 进度条信息框 -->--%>
+<%--								<li>--%>
+<%--									<a>--%>
+<%--										<!-- 文字说明 -->--%>
+<%--										<div class="task-info">--%>
+<%--											<div class="desc">title</div>--%>
+<%--											<div class="percent">50%</div>--%>
+<%--										</div>--%>
+<%--										<!-- 文字说明 -->--%>
 
-									</a>
-								</li>
-								<!-- 进度条信息框 -->
+<%--										<!-- 进度条图样 -->--%>
+<%--										<div class="progress progress-striped">--%>
+<%--											<div class="progress-bar progress-bar-success" style="width: 50%"></div>--%>
+<%--										</div>--%>
+<%--										<!-- 进度条图样 -->--%>
 
-							</ul>
-							<!-- 进度条主栏目 -->
+<%--									</a>--%>
+<%--								</li>--%>
+<%--								<!-- 进度条信息框 -->--%>
 
-						</li>
-						<!-- 进度框 -->
+<%--							</ul>--%>
+<%--							<!-- 进度条主栏目 -->--%>
 
-						<!-- 消息框 -->
-						<li id="header_inbox_bar" class="dropdown">
+<%--						</li>--%>
+<%--						<!-- 进度框 -->--%>
 
-							<!-- Icon和上角标 -->
-							<a data-toggle="dropdown" class="dropdown-toggle">
-								<i class="fa fa-envelope-o">
-									<div
-										style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -22px -435px ;zoom: 0.7;">
+<%--						<!-- 消息框 -->--%>
+<%--						<li id="header_inbox_bar" class="dropdown">--%>
 
-									</div>
-								</i>
-								<span class="badge bg-theme">
-									1
-								</span>
-							</a>
-							<!-- Icon和上角标 -->
+<%--							<!-- Icon和上角标 -->--%>
+<%--							<a data-toggle="dropdown" class="dropdown-toggle">--%>
+<%--								<i class="fa fa-envelope-o">--%>
+<%--									<div--%>
+<%--										style="width:2.4em;height: 2.3em;background: url(Img/Page/Icon_01.png) -22px -435px ;zoom: 0.7;">--%>
 
-							<!-- 栏目主体 -->
-							<ul class="dropdown-menu extended inbox">
-								<!-- 栏目标题 -->
-								<div class="notify-arrow notify-arrow-green"></div>
-								<li>
-									<p class="green">你有一条新消息</p>
-								</li>
-								<!-- 栏目标题 -->
+<%--									</div>--%>
+<%--								</i>--%>
+<%--								<span class="badge bg-theme">--%>
+<%--									1--%>
+<%--								</span>--%>
+<%--							</a>--%>
+<%--							<!-- Icon和上角标 -->--%>
 
-								<!-- 消息框 -->
-								<li>
-									<a>
+<%--							<!-- 栏目主体 -->--%>
+<%--							<ul class="dropdown-menu extended inbox">--%>
+<%--								<!-- 栏目标题 -->--%>
+<%--								<div class="notify-arrow notify-arrow-green"></div>--%>
+<%--								<li>--%>
+<%--									<p class="green">你有一条新消息</p>--%>
+<%--								</li>--%>
+<%--								<!-- 栏目标题 -->--%>
 
-										<!-- 发消息人头像 -->
-										<span class="photo">
-											<img alt="avatar" src="Img/User/IconUserDefault.png">
-										</span>
-										<!-- 发消息人头像 -->
+<%--								<!-- 消息框 -->--%>
+<%--								<li>--%>
+<%--									<a>--%>
 
-										<!-- 发消息人和时间 -->
-										<span class="subject">
-											<span class="from">UserName</span>
-											<span class="time">2021.01.01</span>
-										</span>
-										<!-- 发消息人和时间 -->
+<%--										<!-- 发消息人头像 -->--%>
+<%--										<span class="photo">--%>
+<%--											<img alt="avatar" src="Img/User/IconUserDefault.png">--%>
+<%--										</span>--%>
+<%--										<!-- 发消息人头像 -->--%>
 
-										<!-- 消息内容 -->
-										<span class="message">
-											TestText TestText TestText TestText
-										</span>
-										<!-- 消息内容 -->
-									</a>
-								</li>
-								<!-- 消息框 -->
+<%--										<!-- 发消息人和时间 -->--%>
+<%--										<span class="subject">--%>
+<%--											<span class="from">UserName</span>--%>
+<%--											<span class="time">2021.01.01</span>--%>
+<%--										</span>--%>
+<%--										<!-- 发消息人和时间 -->--%>
 
-								<!-- 底部按钮 -->
-								<li>
-									<a href="#">查看全部消息</a>
-								</li>
-								<!-- 底部按钮 -->
+<%--										<!-- 消息内容 -->--%>
+<%--										<span class="message">--%>
+<%--											TestText TestText TestText TestText--%>
+<%--										</span>--%>
+<%--										<!-- 消息内容 -->--%>
+<%--									</a>--%>
+<%--								</li>--%>
+<%--								<!-- 消息框 -->--%>
 
-							</ul>
-							<!-- 栏目主体 -->
+<%--								<!-- 底部按钮 -->--%>
+<%--								<li>--%>
+<%--									<a href="#">查看全部消息</a>--%>
+<%--								</li>--%>
+<%--								<!-- 底部按钮 -->--%>
 
-						</li>
-						<!-- 消息框 -->
+<%--							</ul>--%>
+<%--							<!-- 栏目主体 -->--%>
 
-					</ul>
-				</div>
-				<!-- 导航栏菜单 -->
+<%--						</li>--%>
+<%--						<!-- 消息框 -->--%>
+
+<%--					</ul>--%>
+<%--				</div>--%>
+<%--				<!-- 导航栏菜单 -->--%>
 
 				<!-- 登出键 -->
 				<div class="top-menu">
 					<ul class="nav pull-right top-menu">
 						<li>
-							<a class="logout" href="" onclick="Page.Redirect.goWelcome();">
+							<a class="logout" href="" onclick="Page.Cookie.claerCookie();Page.Redirect.goWelcome();">
 								Logout
 							</a>
 						</li>
@@ -203,7 +210,6 @@
 
 			</header>
 			<!-- 导航栏 -->
-
 
 			<!-- 菜单栏 -->
 			<aside>
@@ -235,11 +241,6 @@
 
 						</li>
 						<!-- 首页按钮 -->
-
-
-
-
-
 					</ul>
 				</div>
 			</aside>
@@ -247,7 +248,12 @@
 
 			<section id="main-content">
 				<section class="wrapper" id="mainblock">
-
+					<center>
+						<h1 style="margin-top: 10em;">欢迎使用汇编语言程序设计学习平台</h1>
+					</center>
+					<center>
+						<h2>Welcome to the learning platform of assembly language programming</h2>
+					</center>
 				</section>
 			</section>
 
@@ -257,15 +263,18 @@
 
 		<%--加载页面，注入信息--%>
 		<script>
+			getSchoolStructure();
+			loadCurriculumListView();
 			loadCookieUser();
 			loadToolMenu(Page.Cookie.getCookieUser().role);
 			loadingRefresh();
+			getSchoolStructure();
 		</script>
 		<%--加载页面，注入信息--%>
 
 
 		<!-- 加载滚动条 and 菜单展开功能 -->
-		<script class="include" type="text/javascript" src="Js/Main/Main_02.js"></script>
+		<script class="include" type="text/javascript" src="Js/Main/MainInclude/Main_02.js"></script>
 		<!-- 加载滚动条 -->
 	</body>
 </html>

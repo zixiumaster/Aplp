@@ -3,9 +3,11 @@ package xyz.zixiu.aplp.Bean.UserBean;
 import xyz.zixiu.aplp.Entity.SignEntity;
 
 /**
+ * 个人信息表单
  * @see #signrole   验证身份
  * @see #signId     验证ID
- * @see #password   验证密码
+ * @see #signbasis  验证id格式
+ * @see #signPassword   验证密码
  */
 public class FromPersonBean {
 
@@ -108,9 +110,8 @@ public class FromPersonBean {
         this.signbasis = signbasis;
     }
 
-
     public SignEntity getSignEntity(){
-        return new SignEntity(this.signbasis,this.signId,this.password);
+        return new SignEntity(this.signbasis,this.signId,this.signPassword);
     }
 
     @Override

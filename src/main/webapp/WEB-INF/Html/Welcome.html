@@ -32,6 +32,7 @@
 				
 			</div>
 			<script type="text/javascript">
+				Page.Cookie.claerCookie();
 				window.onload = function() {
 					var textArray=new Array("Assembly","language","Programming","Learning","platform");
 					var textHtml="";
@@ -44,7 +45,47 @@
 					var textObject = document.getElementById("startText");
 					textObject.innerHTML=textHtml;
 					var jump = setTimeout(goLogin, 2000);
-					setCookiePage();
+					Page.Cookie.setCookiePageTime();
+
+					console.log("更新个人信息");
+					function getSign() {
+
+						var user=Page.Cookie.getCookieUser();
+
+						var ret = new Object();
+
+						ret.role=user.role;
+						ret.basis = user.basis;
+						ret.id = user.id;
+						ret.password = user.password;
+						return JSON.stringify(ret);
+					}
+
+					$.ajax({
+						url: Page.Redirect.toLogin,
+						contentType: "application/json",
+						data: getSign(),
+						dataType: "JSON",
+						type: "POST",
+						success: function(data) {
+							console.log("获取到json，开始检查");
+							if(data!=null){
+								//登录成功后，把用户信息写入到cookie里面
+								console.log("获取到json，非空");
+								Page.Cookie.setCookieUser(data);
+								console.log("写入cookie");
+								console.log("更新时间戳");
+								Page.Cookie.setCookiePageTime();
+							}else{
+								console.log("更新失败");
+							}
+						},
+						error: function(XMLResponse) {
+							console.log(XMLResponse.responseText);
+						}
+					});
+
+
 				}
 			</script>
 		</div>

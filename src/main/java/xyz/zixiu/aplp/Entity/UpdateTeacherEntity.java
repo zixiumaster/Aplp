@@ -1,6 +1,7 @@
 package xyz.zixiu.aplp.Entity;
 
 import xyz.zixiu.aplp.Bean.UserBean.FromPersonBean;
+import xyz.zixiu.aplp.Bean.UserBean.FromSchoolBean;
 
 public class UpdateTeacherEntity extends ReadTeacherEntity {
 
@@ -50,29 +51,64 @@ public class UpdateTeacherEntity extends ReadTeacherEntity {
                 "signBasis='" + signBasis + '\'' +
                 ", signId='" + signId + '\'' +
                 ", signPassword='" + signPassword + '\'' +
-                super.toString()+
+                super.toString() +
                 '}';
     }
 
-    public void setFromPersonBean(FromPersonBean from){
-        this.signBasis=from.getSignbasis();
-        this.signId= from.getSignId();
-        this.signPassword= from.getSignPassword();
+    public void setFromPersonBean(FromPersonBean from) {
+        this.signBasis = from.getSignbasis();
+        this.signId = from.getSignId();
+        this.signPassword = from.getSignPassword();
         super.setId(from.getId());
         super.setName(from.getName());
         super.setEmail(from.getEmail());
         super.setPhone(from.getPhone());
-        super.setPassword(from.getPassword());
-
+        //如果表单中的新密码为空，就把验证密码放进去
+        if (from.getPassword() != null) {
+            super.setPassword(from.getPassword());
+        } else {
+            super.setPassword(from.getSignPassword());
+        }
     }
 
-    public void setUpdateTeacherEntity(ReadTeacherEntity read) {
-        super.setId(read.getId());
-        super.setName(read.getName());
-        super.setEmail(read.getEmail());
-        super.setPhone(read.getPhone());
-        super.setPassword(read.getPassword());
-        super.setDepartment(read.getDepartment());
+    public void setFromSchoolBean(FromSchoolBean bean) {
+        this.signBasis = bean.getSignbasis();
+        this.signId = bean.getSignId();
+        this.signPassword = bean.getSignPassword();
+        super.setDepartment(bean.getDepartment());
+    }
+
+    public void setUpdateTeacherEntity(ReadTeacherEntity read) throws Exception {
+        try {
+            super.setId(read.getId());
+        } catch (Exception e) {
+
+        }
+        try {
+            super.setName(read.getName());
+        } catch (Exception e) {
+
+        }
+        try {
+            super.setEmail(read.getEmail());
+        } catch (Exception e) {
+
+        }
+        try {
+            super.setPhone(read.getPhone());
+        } catch (Exception e) {
+
+        }
+        try {
+            super.setPassword(read.getPassword());
+        } catch (Exception e) {
+
+        }
+        try {
+            super.setDepartment(read.getDepartment());
+        } catch (Exception e) {
+
+        }
     }
 
 
